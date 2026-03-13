@@ -22,6 +22,17 @@ h2 {
   border-bottom: 2px solid #3498db;
   padding-bottom: 10px;
 }
+#chapter-select {
+  font-size: 0.9em;
+  font-weight: normal;
+  color: #2c3e50;
+  border: 1px solid #3498db;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  background: #fff;
+  vertical-align: middle;
+}
 .question {
   margin-bottom: 25px;
   padding: 15px;

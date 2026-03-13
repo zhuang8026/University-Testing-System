@@ -9,7 +9,16 @@
 <body>
 
 <div class="quiz-container">
-    <h2>MIS 管理資訊系統 - 隨機測驗：第一章</h2>
+    <h2>MIS 管理資訊系統 - 隨機測驗：<select id="chapter-select">
+        <option value="0">第一章</option>
+        <option value="1">第二章</option>
+        <option value="2">第三章</option>
+        <option value="3">第四章</option>
+        <option value="4">第五章</option>
+        <option value="5">第六章</option>
+        <option value="6">第七章</option>
+        <option value="7">第八章</option>
+    </select></h2>
     <div class="progress" id="progress">
         <span id="progress-text">進度：1 / 20</span>
         <span id="total-count"></span>
@@ -28,17 +37,26 @@
 import questionList from './asset/js/index.js';
 
 const { qa01, qa02, qa03, qa04, qa05, qa06, qa07, qa08 } = questionList;
+const allChapters = [qa01, qa02, qa03, qa04, qa05, qa06, qa07, qa08];
 
 let selectedQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
 function initQuiz() {
-    document.getElementById('total-count').innerText = `（題庫共 ${qa01.length} 題）`;
-    // 隨機選20題
-    selectedQuestions = [...qa01].sort(() => 0.5 - Math.random()).slice(0, 20);
+    const chapterIndex = parseInt(document.getElementById('chapter-select').value);
+    const pool = allChapters[chapterIndex];
+    document.getElementById('total-count').innerText = `（題庫共 ${pool.length} 題）`;
+    selectedQuestions = [...pool].sort(() => 0.5 - Math.random()).slice(0, 20);
+    currentQuestionIndex = 0;
+    score = 0;
+    document.getElementById('quiz-content').style.display = '';
+    document.getElementById('progress').style.display = '';
+    document.getElementById('result-area').style.display = 'none';
     renderQuestion();
 }
+
+document.getElementById('chapter-select').addEventListener('change', initQuiz);
 
 function renderQuestion() {
     if (currentQuestionIndex >= selectedQuestions.length) {
