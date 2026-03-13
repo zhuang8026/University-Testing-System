@@ -1,3 +1,6 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 body {
   font-family:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -33,17 +36,19 @@ h2 {
 .options {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 8px;
+  gap: 10px;
 }
 button.option {
   background: #fff;
   border: 1px solid #ddd;
-  padding: 10px 15px;
+  padding: 14px 18px;
   text-align: left;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
-  font-size: 1em;
+  font-size: 1.05em;
+  width: 100%;
+  min-height: 52px;
 }
 button.option:hover {
   background: #e1f5fe;
@@ -90,4 +95,30 @@ button.wrong {
 }
 .btn-restart:hover {
   background: #2980b9;
+}
+
+/* ── RWD：手機（≤ 600px）滿版 ── */
+@media (max-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+  .quiz-container {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 16px;
+    min-height: 100dvh;
+  }
+  h2 {
+    font-size: 1.05em;
+  }
+  .question-text {
+    font-size: 1em;
+  }
+  button.option {
+    font-size: 1em;
+    padding: 16px 14px;
+    min-height: 56px;
+  }
 }

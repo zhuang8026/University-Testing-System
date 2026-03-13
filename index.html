@@ -2,13 +2,14 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIS 隨機測驗</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 <body>
 
 <div class="quiz-container">
-    <h2>MIS 管理資訊系統 - 隨機測驗</h2>
+    <h2>MIS 管理資訊系統 - 隨機測驗：第一章</h2>
     <div class="progress" id="progress">
         <span id="progress-text">進度：1 / 20</span>
         <span id="total-count"></span>
@@ -24,7 +25,9 @@
 </div>
 
 <script type="module">
-import { qa01 } from './testing/QA_01.js';
+import questionList from './asset/js/index.js';
+
+const { qa01, qa02, qa03, qa04, qa05, qa06, qa07, qa08 } = questionList;
 
 let selectedQuestions = [];
 let currentQuestionIndex = 0;
