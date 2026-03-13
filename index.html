@@ -8,8 +8,11 @@
 <body>
 
 <div class="quiz-container">
-    <h2>MIS 管理資訊系統 - 隨機測驗 <span id="total-count"></span> </h2>
-    <div class="progress" id="progress">進度：1 / 20</div>
+    <h2>MIS 管理資訊系統 - 隨機測驗</h2>
+    <div class="progress" id="progress">
+        <span id="progress-text">進度：1 / 20</span>
+        <span id="total-count"></span>
+    </div>
     
     <div id="quiz-content"></div>
 
@@ -41,7 +44,7 @@ function renderQuestion() {
     }
 
     const qData = selectedQuestions[currentQuestionIndex];
-    document.getElementById('progress').innerText = `進度：${currentQuestionIndex + 1} / 20`;
+    document.getElementById('progress-text').innerText = `進度：${currentQuestionIndex + 1} / 20`;
     
     let html = `
         <div class="question">
