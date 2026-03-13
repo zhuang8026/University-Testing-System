@@ -2,17 +2,16 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>MIS 隨機測驗 20 題</title>
+    <title>MIS 隨機測驗 20 題></title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
 <div class="quiz-container">
-    <h2>MIS 管理資訊系統 - 隨機測驗</h2>
+    <h2>MIS 管理資訊系統 - 隨機測驗 <span id="total-count"></span> </h2>
     <div class="progress" id="progress">進度：1 / 20</div>
     
-    <div id="quiz-content">
-        </div>
+    <div id="quiz-content"></div>
 
     <div id="result-area">
         <h3>測驗結束！</h3>
@@ -29,6 +28,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 
 function initQuiz() {
+    document.getElementById('total-count').innerText = `（題庫共 ${qa01.length} 題）`;
     // 隨機選20題
     selectedQuestions = [...qa01].sort(() => 0.5 - Math.random()).slice(0, 20);
     renderQuestion();
