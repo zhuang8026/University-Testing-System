@@ -29,6 +29,7 @@
     <div id="result-area">
         <h3>測驗結束！</h3>
         <p id="score-text" style="font-size: 1.5em; font-weight: bold;"></p>
+        <div id="wrong-answers-area"></div>
         <button class="btn-restart" onclick="location.reload()">重新挑戰</button>
     </div>
 </div>
@@ -42,14 +43,30 @@ const allChapters = [qa01, qa02, qa03, qa04, qa05, qa06, qa07, qa08];
 let selectedQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
+let wrongAnswers = [];
+
+function saveChapterCookie(index) {
+    document.cookie = `mis_chapter=${index}; max-age=${60 * 60 * 24 * 365}; path=/`;
+}
+
+function loadChapterCookie() {
+    const match = document.cookie.match(/(?:^|;\s*)mis_chapter=(\d+)/);
+    return match ? parseInt(match[1]) : 0;
+}
+
+const savedChapter = loadChapterCookie();
+const select = document.getElementById('chapter-select');
+select.value = savedChapter;
 
 function initQuiz() {
     const chapterIndex = parseInt(document.getElementById('chapter-select').value);
+    saveChapterCookie(chapterIndex);
     const pool = allChapters[chapterIndex];
     document.getElementById('total-count').innerText = `（題庫共 ${pool.length} 題）`;
     selectedQuestions = [...pool].sort(() => 0.5 - Math.random()).slice(0, 20);
     currentQuestionIndex = 0;
     score = 0;
+    wrongAnswers = [];
     document.getElementById('quiz-content').style.display = '';
     document.getElementById('progress').style.display = '';
     document.getElementById('result-area').style.display = 'none';
@@ -94,6 +111,7 @@ function checkAnswer(selectedIndex, btnElement) {
     } else {
         btnElement.classList.add('wrong');
         buttons[qData.correct].classList.add('correct');
+        wrongAnswers.push({ qData, selectedIndex });
     }
 
     setTimeout(() => {
@@ -110,6 +128,25 @@ function showResult() {
     
     const percentage = (score / 20) * 100;
     document.getElementById('score-text').innerText = `答對題數：${score} / 20 (${percentage}分)`;
+
+    const wrongArea = document.getElementById('wrong-answers-area');
+    if (wrongAnswers.length === 0) {
+        wrongArea.innerHTML = '<p style="color:#28a745; font-weight:bold;">🎉 全部答對！</p>';
+    } else {
+        let html = `<div class="wrong-review"><h4>答錯的題目（共 ${wrongAnswers.length} 題）</h4>`;
+        wrongAnswers.forEach((item, i) => {
+            const { qData, selectedIndex } = item;
+            html += `
+                <div class="wrong-item">
+                    <div class="wrong-q">${i + 1}. ${qData.q}</div>
+                    <div class="wrong-your">✗ 你的答案：(${selectedIndex + 1}) ${qData.a[selectedIndex]}</div>
+                    <div class="wrong-correct">✓ 正確答案：(${qData.correct + 1}) ${qData.a[qData.correct]}</div>
+                </div>
+            `;
+        });
+        html += '</div>';
+        wrongArea.innerHTML = html;
+    }
 }
 
 window.checkAnswer = checkAnswer;
