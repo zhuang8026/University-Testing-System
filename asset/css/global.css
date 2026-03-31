@@ -1,0 +1,105 @@
+/* ═══════════════════════════════════════════════════════════════
+   Global — 全站共用基底
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Design Tokens ── */
+:root {
+  --bg: #06080f;
+  --surface: rgba(255, 255, 255, 0.035);
+  --border: rgba(255, 255, 255, 0.07);
+  --text: #d4dae6;
+  --text2: rgba(255, 255, 255, 0.45);
+  --text3: rgba(255, 255, 255, 0.25);
+  --accent: #60a5fa;
+  --accent2: #38bdf8;
+  --green: #34d399;
+  --red: #fb7185;
+  --amber: #fbbf24;
+  --font: 'Noto Sans TC', 'SF Pro Display', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+/* ── Base ── */
+html { font-size: 16px; }
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 50% at 50% -20%,
+    rgba(56, 189, 248, 0.06),
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Shared Buttons ── */
+.btn-primary {
+  padding: 14px 44px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--font);
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(37, 99, 235, 0.35);
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 28px rgba(37, 99, 235, 0.45);
+}
+
+.btn-secondary {
+  padding: 13px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* ── Back Link ── */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text3);
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: color 0.15s;
+}
+.back-link:hover { color: var(--accent); }
+
+/* ── Animation ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

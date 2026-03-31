@@ -1,0 +1,120 @@
+/* ═══════════════════════════════════════════════════════════════
+   Home — 首頁專屬樣式（需搭配 global.css）
+   ═══════════════════════════════════════════════════════════════ */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Container ── */
+.container {
+  width: 100%;
+  max-width: 520px;
+  padding: 20px 16px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.6s ease;
+}
+
+/* ── Badge ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1e3a5f, #0f2942);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--accent);
+  margin-bottom: 32px;
+  box-shadow: 0 12px 40px rgba(56, 189, 248, 0.12);
+}
+
+/* ── Title ── */
+h1 {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: #e8edf5;
+  margin-bottom: 10px;
+}
+.subtitle {
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 48px;
+}
+
+/* ── Entry Cards ── */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.18s ease;
+}
+.card:hover {
+  border-color: rgba(96, 165, 250, 0.3);
+  background: rgba(96, 165, 250, 0.06);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.1);
+}
+.card-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: var(--mono);
+}
+.card-icon.mis {
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.15), rgba(52, 211, 153, 0.05));
+  color: var(--green);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+.card-icon.en {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.15), rgba(96, 165, 250, 0.05));
+  color: var(--accent);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+}
+.card-body { text-align: left; }
+.card-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #e8edf5;
+  margin-bottom: 4px;
+}
+.card-desc {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.5;
+}
+.card-arrow {
+  margin-left: auto;
+  font-size: 18px;
+  color: var(--text3);
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+.card:hover .card-arrow {
+  transform: translateX(4px);
+  color: var(--accent);
+}

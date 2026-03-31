@@ -1,0 +1,269 @@
+{
+  "core": [
+    {
+      "w": "purpose",
+      "zh": "目的",
+      "syns": ["intention", "aim", "motive", "motivation", "goal"],
+      "phrase": {
+        "k": "on purpose",
+        "means": "intentionally / deliberately / purposely（故意地）",
+        "wrongMeans": ["偶然地；意外地", "不知不覺地", "勉強地；不情願地"]
+      },
+      "sent": {
+        "text": "Everywhere on earth there are food specialists with opposite opinions on the best kinds of nutrition for various ___.",
+        "ans": "purposes"
+      }
+    },
+    {
+      "w": "achieve",
+      "zh": "達到",
+      "syns": ["fulfill", "accomplish", "attain", "reach"],
+      "forms": [
+        {
+          "f": "achievement",
+          "pos": "n.",
+          "syns": ["fulfillment", "accomplishment", "attainment"]
+        },
+        { "f": "achievable", "pos": "adj.", "syns": [] }
+      ],
+      "sent": {
+        "text": "On the last day, all of us stood inside a room we had built in just a week, feeling a sense of ___.",
+        "ans": "achievement"
+      }
+    },
+    {
+      "w": "celebrate",
+      "zh": "慶祝",
+      "syns": ["commemorate", "observe"],
+      "forms": [
+        {
+          "f": "celebrated",
+          "pos": "adj.",
+          "syns": [
+            "distinguished",
+            "outstanding",
+            "prominent",
+            "eminent",
+            "remarkable",
+            "important",
+            "well-known"
+          ]
+        }
+      ]
+    },
+    {
+      "w": "impact",
+      "zh": "影響",
+      "syns": ["influence", "affect"],
+      "phrase": {
+        "k": "have a powerful impact on",
+        "means": "對…有強大的影響",
+        "wrongMeans": ["與…毫無關係", "為…感到抱歉", "對…感到困惑"]
+      },
+      "sent": {
+        "text": "Education can have a huge ___ on a child's life.",
+        "ans": "impact"
+      }
+    },
+    {
+      "w": "cunning",
+      "zh": "狡猾",
+      "syns": ["wily", "sly", "crafty", "shrewd", "tricky"]
+    },
+    {
+      "w": "tradition",
+      "zh": "傳統",
+      "syns": ["convention", "custom"],
+      "def": "a custom or belief handed down from generation to generation",
+      "forms": [{ "f": "traditional", "pos": "adj.", "syns": ["conventional"] }],
+      "sent": {
+        "text": "It's ___ in some countries for the bride to wear a white dress for the wedding.",
+        "ans": "traditional"
+      }
+    },
+    {
+      "w": "excited",
+      "zh": "興奮",
+      "syns": ["incited", "provoked", "stirred", "thrilled"],
+      "forms": [
+        {
+          "f": "excite",
+          "pos": "v.",
+          "syns": ["incite", "provoke", "stir", "thrill"]
+        },
+        {
+          "f": "exciting",
+          "pos": "adj.",
+          "syns": ["inciting", "provoking", "stirring", "thrilling"]
+        }
+      ]
+    },
+    {
+      "w": "evident",
+      "zh": "明顯",
+      "syns": ["obvious", "apparent", "clear", "plain"],
+      "forms": [{ "f": "evidently", "pos": "adv.", "syns": ["obviously"] }],
+      "sent": {
+        "text": "For ___ reasons, the government worries that the volcano will erupt again.",
+        "ans": "evident"
+      }
+    },
+    {
+      "w": "replace",
+      "zh": "代替",
+      "syns": ["substitute", "take the place of", "displace", "supplant"],
+      "forms": [
+        {
+          "f": "replacement",
+          "pos": "n.",
+          "syns": ["substitution", "supplanting", "taking the place of"]
+        }
+      ],
+      "sent": {
+        "text": "Television and video can easily ___ family communication as well as physical activity and other interests.",
+        "ans": "replace"
+      }
+    },
+    {
+      "w": "ancient",
+      "zh": "古老的",
+      "syns": ["old", "aged", "antique", "archaic"],
+      "def": "belonging to the very distant past（古代的；古老的）"
+    },
+    {
+      "w": "participate",
+      "zh": "參加",
+      "syns": [
+        "take part in",
+        "partake in",
+        "join in",
+        "engage in",
+        "become involved in"
+      ],
+      "forms": [
+        { "f": "participation", "pos": "n.", "syns": [] },
+        { "f": "participant", "pos": "n.", "syns": [] }
+      ]
+    },
+    {
+      "w": "competitor",
+      "zh": "競爭者",
+      "syns": [
+        "rival",
+        "opponent",
+        "contender",
+        "contestant",
+        "challenger",
+        "antagonist"
+      ],
+      "forms": [
+        {
+          "f": "competition",
+          "pos": "n.",
+          "syns": ["match", "contest", "rivalry"]
+        },
+        {
+          "f": "compete",
+          "pos": "v.",
+          "syns": ["rival", "contend", "contest", "match"]
+        },
+        { "f": "competitive", "pos": "adj.", "syns": [] }
+      ]
+    },
+    {
+      "w": "represent",
+      "zh": "代表",
+      "syns": [
+        "stand for",
+        "symbolize",
+        "denote",
+        "exemplify",
+        "describe",
+        "portray",
+        "explain",
+        "define"
+      ],
+      "forms": [
+        {
+          "f": "representation",
+          "pos": "n.",
+          "syns": ["depiction", "portrayal", "symbol"]
+        }
+      ],
+      "sent": {
+        "text": "The color green ___ peace and happiness.",
+        "ans": "represents"
+      }
+    },
+    {
+      "w": "proud",
+      "zh": "自豪的",
+      "syns": [
+        "arrogant",
+        "insolent",
+        "scornful",
+        "disdainful",
+        "contemptuous"
+      ],
+      "forms": [
+        {
+          "f": "pride",
+          "pos": "n.",
+          "syns": [
+            "hubris",
+            "arrogance",
+            "insolence",
+            "scorn",
+            "disdain",
+            "contempt"
+          ]
+        }
+      ]
+    }
+  ],
+  "sports": [
+    {
+      "w": "sailing",
+      "zh": "帆船運動；航行",
+      "def": "the action of sailing in a ship or boat as a sport or pastime"
+    },
+    {
+      "w": "boxing",
+      "zh": "拳擊；拳擊運動",
+      "def": "the sport or practice of fighting with the fists, especially with padded gloves in a ring"
+    },
+    {
+      "w": "table tennis",
+      "zh": "桌球；乒乓球",
+      "def": "a game in which two or four players hit a lightweight ball back and forth across a table using small rackets"
+    },
+    {
+      "w": "judo",
+      "zh": "柔道",
+      "def": "a sport of Japanese origin in which the goal is to throw or tackle an opponent to the ground"
+    },
+    {
+      "w": "fencing",
+      "zh": "擊劍；劍術",
+      "def": "the sport of fighting with light swords to score points"
+    },
+    {
+      "w": "gymnastics",
+      "zh": "體操",
+      "def": "exercises developing or displaying physical agility and coordination, typically performed on equipment"
+    }
+  ],
+  "child": [
+    { "w": "view ... as", "zh": "視...為" },
+    { "w": "eccentricities", "zh": "怪癖；古怪行為" },
+    { "w": "kidding around", "zh": "開玩笑；玩鬧" },
+    { "w": "elementary", "zh": "基本的；單純的" },
+    { "w": "fate", "zh": "命運" },
+    { "w": "compensate", "zh": "補償" },
+    { "w": "wonder", "zh": "奇蹟；奇遇" },
+    { "w": "adventurous", "zh": "冒險的" },
+    { "w": "conquest", "zh": "征服" },
+    { "w": "fantastical", "zh": "奇幻的" },
+    { "w": "painful", "zh": "痛苦的" }
+  ]
+}

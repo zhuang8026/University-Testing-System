@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIS 隨機測驗</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../asset/css/global.css">
+    <link rel="stylesheet" href="../../asset/css/style.css">
+</head>
+<body>
+
+<div class="quiz-container">
+    <a class="back-link" href="../../index.html">← 返回首頁</a>
+
+    <div class="quiz-header">
+        <div class="quiz-header-badge">MIS</div>
+        <h2>管理資訊系統 - 隨機測驗</h2>
+    </div>
+
+    <select id="chapter-select">
+        <option value="0">第一章</option>
+        <option value="1">第二章</option>
+        <option value="2">第三章</option>
+        <option value="3">第四章</option>
+        <option value="4">第五章</option>
+        <option value="5">第六章</option>
+        <option value="6">第七章</option>
+        <option value="7">第八章</option>
+    </select>
+
+    <div class="progress" id="progress">
+        <span id="progress-text">進度：1 / 20</span>
+        <span id="total-count"></span>
+    </div>
+
+    <div id="quiz-content"></div>
+
+    <div id="result-area">
+        <h3>測驗結束！</h3>
+        <p id="score-text"></p>
+        <div id="wrong-answers-area"></div>
+        <button class="btn-primary" onclick="location.reload()">重新挑戰</button>
+    </div>
+</div>
+
+<script type="module">
+import questionList from '../../asset/js/index.js';
+
+const { qa01, qa02, qa03, qa04, qa05, qa06, qa07, qa08 } = questionList;
+const allChapters = [qa01, qa02, qa03, qa04, qa05, qa06, qa07, qa08];
+
+let selectedQuestions = [];
+let currentQuestionIndex = 0;
+let score = 0;
+let wrongAnswers = [];
+
+function saveChapterCookie(index) {
+    document.cookie = `mis_chapter=${index}; max-age=${60 * 60 * 24 * 365}; path=/`;
+}
+
+function loadChapterCookie() {
+    const match = document.cookie.match(/(?:^|;\s*)mis_chapter=(\d+)/);
+    return match ? parseInt(match[1]) : 0;
+}
+
+const savedChapter = loadChapterCookie();
+const select = document.getElementById('chapter-select');
+select.value = savedChapter;
+
+function initQuiz() {
+    const chapterIndex = parseInt(document.getElementById('chapter-select').value);
+    saveChapterCookie(chapterIndex);
+    const pool = allChapters[chapterIndex];
+    document.getElementById('total-count').innerText = `題庫共 ${pool.length} 題`;
+    selectedQuestions = [...pool].sort(() => 0.5 - Math.random()).slice(0, 20);
+    currentQuestionIndex = 0;
+    score = 0;
+    wrongAnswers = [];
+    document.getElementById('quiz-content').style.display = '';
+    document.getElementById('progress').style.display = '';
+    document.getElementById('result-area').style.display = 'none';
+    renderQuestion();
+}
+
+document.getElementById('chapter-select').addEventListener('change', initQuiz);
+
+function renderQuestion() {
+    if (currentQuestionIndex >= selectedQuestions.length) {
+        showResult();
+        return;
+    }
+
+    const qData = selectedQuestions[currentQuestionIndex];
+    document.getElementById('progress-text').innerText = `進度：${currentQuestionIndex + 1} / 20`;
+
+    const letters = 'ABCD';
+    let html = `
+        <div class="question">
+            <div class="question-text">${qData.q}</div>
+            <div class="options">
+    `;
+
+    qData.a.forEach((opt, index) => {
+        html += `<button class="option" onclick="checkAnswer(${index}, this)">${letters[index]}. ${opt}</button>`;
+    });
+
+    html += `</div></div>`;
+    document.getElementById('quiz-content').innerHTML = html;
+}
+
+function checkAnswer(selectedIndex, btnElement) {
+    const qData = selectedQuestions[currentQuestionIndex];
+    const buttons = document.querySelectorAll('.option');
+
+    buttons.forEach(btn => btn.disabled = true);
+
+    if (selectedIndex === qData.correct) {
+        btnElement.classList.add('correct');
+        score++;
+    } else {
+        btnElement.classList.add('wrong');
+        buttons[qData.correct].classList.add('correct');
+        wrongAnswers.push({ qData, selectedIndex });
+    }
+
+    setTimeout(() => {
+        currentQuestionIndex++;
+        renderQuestion();
+    }, 1200);
+}
+
+function showResult() {
+    document.getElementById('quiz-content').style.display = 'none';
+    document.getElementById('progress').style.display = 'none';
+    const resultArea = document.getElementById('result-area');
+    resultArea.style.display = 'block';
+
+    const percentage = (score / 20) * 100;
+    document.getElementById('score-text').innerText = `${score} / 20（${percentage} 分）`;
+
+    const wrongArea = document.getElementById('wrong-answers-area');
+    if (wrongAnswers.length === 0) {
+        wrongArea.innerHTML = '<p style="color:var(--green); font-weight:bold; font-size:18px; margin-top:8px;">全部答對！</p>';
+    } else {
+        let html = `<div class="wrong-review"><h4>答錯的題目（共 ${wrongAnswers.length} 題）</h4>`;
+        wrongAnswers.forEach((item, i) => {
+            const { qData, selectedIndex } = item;
+            const letters = 'ABCD';
+            html += `
+                <div class="wrong-item">
+                    <div class="wrong-q">${i + 1}. ${qData.q}</div>
+                    <div class="wrong-your">✗ 你的答案：${letters[selectedIndex]}. ${qData.a[selectedIndex]}</div>
+                    <div class="wrong-correct">✓ 正確答案：${letters[qData.correct]}. ${qData.a[qData.correct]}</div>
+                </div>
+            `;
+        });
+        html += '</div>';
+        wrongArea.innerHTML = html;
+    }
+}
+
+window.checkAnswer = checkAnswer;
+initQuiz();
+</script>
+
+</body>
+</html>
