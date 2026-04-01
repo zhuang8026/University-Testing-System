@@ -1,6 +1,7 @@
 let CORE = [];
 let SPORTS = [];
 let CHILD = [];
+let OLYMPIC = [];
 
 let allCoreSyns = [];
 let allFormSyns = [];
@@ -9,6 +10,8 @@ let allCoreWords = [];
 let allZhCore = [];
 let allZhChild = [];
 let allZhSports = [];
+let allOlympicWords = [];
+let allZhOlympic = [];
 
 async function loadData() {
   const resp = await fetch('../../asset/data/en_words.json');
@@ -16,6 +19,7 @@ async function loadData() {
   CORE = data.core;
   SPORTS = data.sports;
   CHILD = data.child;
+  OLYMPIC = data.olympic;
 
   allCoreSyns = CORE.flatMap((c) => c.syns || []);
   allFormSyns = CORE.flatMap((c) =>
@@ -26,6 +30,8 @@ async function loadData() {
   allZhCore = CORE.map((c) => c.zh);
   allZhChild = CHILD.map((c) => c.zh);
   allZhSports = SPORTS.map((c) => c.zh);
+  allOlympicWords = OLYMPIC.map((c) => c.w);
+  allZhOlympic = OLYMPIC.map((c) => c.zh);
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -74,6 +80,9 @@ const TYPE_LABELS = {
   notsyn: '反向選擇',
   sen2zh: '運動英翻中',
   sformq: '衍生詞配對',
+  passage: '閱讀測驗',
+  olvoc: '奧運單字',
+  oldef: '奧運定義',
 };
 
 // ═══════════════════════════════════════════════════════════════
@@ -377,6 +386,144 @@ G.notsyn = () => {
   };
 };
 
+// ═══════════════════════════════════════════════════════════════
+//  OLYMPIC PASSAGE — STATIC COMPREHENSION QUESTIONS
+// ═══════════════════════════════════════════════════════════════
+const PASSAGE_QS = [
+  {
+    type: 'passage',
+    question: '根據文章，古代奧運會的目的是什麼？\nAccording to the passage, what was the purpose of the ancient Olympic Games?',
+    options: ['To honor the Greek god Zeus', 'To celebrate military victories', 'To promote trade among cities', 'To unite all nations'],
+    answer: 'To honor the Greek god Zeus',
+    explanation: '文章第二句：The purpose of the ancient games was to honor the Greek god Zeus.',
+  },
+  {
+    type: 'passage',
+    question: '古代奧運會只允許哪些人參加？\nWho was allowed to take part in the ancient Olympic Games?',
+    options: ['Only Greek males', 'All Greek citizens', 'Only Greek females', 'Athletes from all countries'],
+    answer: 'Only Greek males',
+    explanation: '文章提到：only Greek males could take part in the games.',
+  },
+  {
+    type: 'passage',
+    question: '古代奧運最初只有哪個運動項目？\nWhat was the only sports event at the beginning of the ancient Olympic Games?',
+    options: ['Running', 'Boxing', 'Horse racing', 'Soccer'],
+    answer: 'Running',
+    explanation: '文章提到：In the beginning, running was the only sports event.',
+  },
+  {
+    type: 'passage',
+    question: '古代奧運為何走向終點？\nWhy did the ancient Olympic Games come to an end?',
+    options: ['With the fall of the Greek Empire', 'Due to a great war', 'Because athletes refused to compete', 'The games became too expensive'],
+    answer: 'With the fall of the Greek Empire',
+    explanation: '文章提到：the ancient games came to an end with the fall of the Greek Empire.',
+  },
+  {
+    type: 'passage',
+    question: '奧運中加入的第一個團隊項目是什麼？\nWhat was the first team game added to the Olympics?',
+    options: ['A soccer match', 'A relay race', 'A swimming relay', 'A rowing race'],
+    answer: 'A soccer match',
+    explanation: '文章提到：The first team game added was a soccer match, which was introduced in 1900.',
+  },
+  {
+    type: 'passage',
+    question: '足球在哪一年被加入奧運會？\nIn what year was soccer introduced to the Olympics?',
+    options: ['1900', '1896', '1908', '1912'],
+    answer: '1900',
+    explanation: '文章提到：a soccer match was introduced in 1900.',
+  },
+  {
+    type: 'passage',
+    question: '運動員在哪一年開始代表自己的國家參賽？\nIn what year did athletes begin representing their own countries?',
+    options: ['1908', '1900', '1896', '1912'],
+    answer: '1908',
+    explanation: '文章提到：in 1908, individual and team competitors began representing their own countries.',
+  },
+  {
+    type: 'passage',
+    question: '1908 年，運動員驕傲地走進哪個城市的體育場，身後舉著什麼？\nIn 1908, athletes walked proudly into the stadium in which city, behind what?',
+    options: ['London, national flags', 'Paris, national flags', 'Athens, torches', 'Berlin, flowers'],
+    answer: 'London, national flags',
+    explanation: '文章提到：athletes walked proudly into the stadium in London behind their national flags.',
+  },
+  {
+    type: 'passage',
+    question: '奧運會多久舉辦一次？\nHow often are the Olympic Games held?',
+    options: ['Every four years', 'Every year', 'Every two years', 'Every three years'],
+    answer: 'Every four years',
+    explanation: '文章提到：Every four years, sports fans tune in to see if more Olympic firsts can be achieved.',
+  },
+  {
+    type: 'passage',
+    question: '文章中 "tune in" 的意思最接近下列哪個？\nWhat does "tune in" mean as used in the passage?',
+    options: ['Watch or listen to a broadcast', 'Adjust a musical instrument', 'Participate in sports events', 'Travel to a new country'],
+    answer: 'Watch or listen to a broadcast',
+    explanation: '"tune in" 意指收看或收聽（轉播節目）。例：sports fans tune in to watch the Olympics.',
+  },
+  {
+    type: 'passage',
+    question: '文章說古代奧運是為了慶祝什麼而舉辦？\nAccording to the passage, what were the ancient games meant to celebrate?',
+    options: ['Individual greatness', 'Team spirit', 'National pride', 'Religious ceremonies'],
+    answer: 'Individual greatness',
+    explanation: '文章提到：The ancient games were meant to celebrate individual greatness.',
+  },
+  {
+    type: 'passage',
+    question: '史上第一次有記載的奧運大約在何時舉行？\nApproximately when were the first recorded Olympic Games held?',
+    options: ['776 BC', '476 BC', '1000 BC', '500 AD'],
+    answer: '776 BC',
+    explanation: '文章首句：The first recorded Olympic Games were held around 776 BC in the city of Olympia, Greece.',
+  },
+];
+
+G.passage = () => {
+  const q = pick(PASSAGE_QS);
+  return {
+    type: 'passage',
+    question: q.question,
+    options: shuffle([...q.options]),
+    answer: q.answer,
+    explanation: q.explanation,
+  };
+};
+
+G.olvoc = () => {
+  const c = pick(OLYMPIC);
+  const isZh2En = Math.random() < 0.5;
+  if (isZh2En) {
+    const others = pick(OLYMPIC.filter((x) => x.w !== c.w), 3).map((x) => x.w);
+    return {
+      type: 'olvoc',
+      question: `「${c.zh}」的英文是？`,
+      options: shuffle([c.w, ...others]),
+      answer: c.w,
+      explanation: `${c.zh} → ${c.w}`,
+    };
+  } else {
+    const others = pick(OLYMPIC.filter((x) => x.zh !== c.zh), 3).map((x) => x.zh);
+    return {
+      type: 'olvoc',
+      question: `"${c.w}" 的中文意思是？`,
+      options: shuffle([c.zh, ...others]),
+      answer: c.zh,
+      explanation: `${c.w} → ${c.zh}`,
+    };
+  }
+};
+
+G.oldef = () => {
+  const pool = OLYMPIC.filter((x) => x.def);
+  const c = pick(pool);
+  const others = pick(pool.filter((x) => x.w !== c.w), 3).map((x) => x.w);
+  return {
+    type: 'oldef',
+    question: `下列哪個字或片語的定義是：\n"${c.def}"？`,
+    options: shuffle([c.w, ...others]),
+    answer: c.w,
+    explanation: `${c.w}（${c.zh}）：${c.def}`,
+  };
+};
+
 G.sformq = () => {
   const pool = CORE.filter((x) => x.forms && x.forms.length > 0);
   const c = pick(pool);
@@ -413,6 +560,9 @@ const POOL = [
   ...Array(2).fill('fsyn'),
   ...Array(1).fill('notsyn'),
   ...Array(1).fill('sformq'),
+  ...Array(4).fill('passage'),
+  ...Array(2).fill('olvoc'),
+  ...Array(1).fill('oldef'),
 ];
 
 // ═══════════════════════════════════════════════════════════════
@@ -426,6 +576,7 @@ function generateQuiz() {
     'syn', 'rsyn', 'fill', 'wform', 'phrase', 'sdef', 'szh',
     'child', 'child_rev', 'celsyn', 'pridesyn', 'defn', 'fsyn',
     'notsyn', 'sen2zh', 'sformq', 'zh2en', 'en2zh',
+    'passage', 'passage', 'olvoc', 'oldef',
   ];
   for (const t of mandatory) {
     let tries = 0;
@@ -484,7 +635,9 @@ function renderHero() {
     <b>定義配對</b>：tradition、ancient 及 6 個運動單字<br>
     <b>6 個運動單字</b>：sailing, boxing, table tennis, judo, fencing, gymnastics<br>
     <b>11 個 Childhood 歌詞單字</b>：中英互譯<br>
-    <b>特殊同義詞群</b>：celebrated（7 個同義詞）、pride（6 個同義詞）
+    <b>特殊同義詞群</b>：celebrated（7 個同義詞）、pride（6 個同義詞）<br>
+    <b>奧運短文閱讀</b>：12 題理解測驗（776 BC 至現代奧運）<br>
+    <b>8 個奧運生詞</b>：honor, individual, stadium, introduce 等中英互譯與定義
   </div>
   <button class="btn-primary" onclick="startQuiz()">開始測驗</button>
 </div>`;

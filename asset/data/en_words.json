@@ -253,6 +253,56 @@
       "def": "exercises developing or displaying physical agility and coordination, typically performed on equipment"
     }
   ],
+  "olympic": [
+    {
+      "w": "honor",
+      "zh": "尊榮；崇敬",
+      "syns": ["respect", "revere", "glorify", "worship"],
+      "def": "to show great respect for someone or something"
+    },
+    {
+      "w": "individual",
+      "zh": "個人的",
+      "syns": ["personal", "single", "separate", "sole"],
+      "def": "relating to a single person, not a group"
+    },
+    {
+      "w": "stadium",
+      "zh": "體育場；運動場",
+      "syns": ["arena", "ground", "venue"],
+      "def": "a large sports ground with rows of seats for spectators"
+    },
+    {
+      "w": "introduce",
+      "zh": "引進；介紹",
+      "syns": ["bring in", "launch", "establish", "present"],
+      "def": "to bring something into use for the first time"
+    },
+    {
+      "w": "take part in",
+      "zh": "參加；參與",
+      "syns": ["participate in", "join in", "engage in"],
+      "def": "to be involved in an activity or event"
+    },
+    {
+      "w": "come to an end",
+      "zh": "結束；終止",
+      "syns": ["finish", "conclude", "terminate", "stop"],
+      "def": "to stop happening or existing"
+    },
+    {
+      "w": "tune in",
+      "zh": "收看；收聽",
+      "syns": ["watch", "listen to", "follow"],
+      "def": "to watch or listen to a broadcast program"
+    },
+    {
+      "w": "national",
+      "zh": "國家的；民族的",
+      "syns": ["public", "state", "governmental"],
+      "def": "relating to a nation as a whole"
+    }
+  ],
   "child": [
     { "w": "view ... as", "zh": "視...為" },
     { "w": "eccentricities", "zh": "怪癖；古怪行為" },
