@@ -27,6 +27,7 @@
         <option value="5">第六章</option>
         <option value="6">第七章</option>
         <option value="7">第八章</option>
+        <option value="8">期中考(1-8)</option>
     </select>
 
     <div class="progress" id="progress">
@@ -54,6 +55,7 @@ let selectedQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let wrongAnswers = [];
+let quizCount = 20;
 
 function saveChapterCookie(index) {
     document.cookie = `mis_chapter=${index}; max-age=${60 * 60 * 24 * 365}; path=/`;
@@ -71,9 +73,10 @@ select.value = savedChapter;
 function initQuiz() {
     const chapterIndex = parseInt(document.getElementById('chapter-select').value);
     saveChapterCookie(chapterIndex);
-    const pool = allChapters[chapterIndex];
+    const pool = chapterIndex === 8 ? allChapters.flat() : allChapters[chapterIndex];
+    quizCount = chapterIndex === 8 ? 50 : 20;
     document.getElementById('total-count').innerText = `題庫共 ${pool.length} 題`;
-    selectedQuestions = [...pool].sort(() => 0.5 - Math.random()).slice(0, 20);
+    selectedQuestions = [...pool].sort(() => 0.5 - Math.random()).slice(0, quizCount);
     currentQuestionIndex = 0;
     score = 0;
     wrongAnswers = [];
@@ -92,7 +95,7 @@ function renderQuestion() {
     }
 
     const qData = selectedQuestions[currentQuestionIndex];
-    document.getElementById('progress-text').innerText = `進度：${currentQuestionIndex + 1} / 20`;
+    document.getElementById('progress-text').innerText = `進度：${currentQuestionIndex + 1} / ${quizCount}`;
 
     const letters = 'ABCD';
     let html = `
@@ -136,14 +139,14 @@ function showResult() {
     const resultArea = document.getElementById('result-area');
     resultArea.style.display = 'block';
 
-    const percentage = (score / 20) * 100;
-    document.getElementById('score-text').innerText = `${score} / 20（${percentage} 分）`;
+    const percentage = (score / quizCount) * 100;
+    document.getElementById('score-text').innerText = `${score} / ${quizCount}（${percentage} 分）`;
 
     const wrongArea = document.getElementById('wrong-answers-area');
     if (wrongAnswers.length === 0) {
         wrongArea.innerHTML = '<p style="color:var(--green); font-weight:bold; font-size:18px; margin-top:8px;">全部答對！</p>';
     } else {
-        let html = `<div class="wrong-review"><h4>答錯的題目（共 ${wrongAnswers.length} 題）</h4>`;
+        let html = `<div class="wrong-review"><h4>答錯的題目（共 ${wrongAnswers.length} / ${quizCount} 題）</h4>`;
         wrongAnswers.forEach((item, i) => {
             const { qData, selectedIndex } = item;
             const letters = 'ABCD';
