@@ -1,0 +1,447 @@
+{
+  "core": [
+    {
+      "w": "purpose",
+      "zh": "目的",
+      "syns": ["intention", "aim", "motive", "motivation", "goal"],
+      "phrase": {
+        "k": "on purpose",
+        "means": "intentionally / deliberately / purposely（故意地）",
+        "wrongMeans": ["偶然地；意外地", "不知不覺地", "勉強地；不情願地"]
+      },
+      "sent": {
+        "text": "Everywhere on earth there are food specialists with opposite opinions on the best kinds of nutrition for various ___.",
+        "ans": "purposes"
+      }
+    },
+    {
+      "w": "achieve",
+      "zh": "達到",
+      "syns": ["fulfill", "accomplish", "attain", "reach"],
+      "forms": [
+        { "f": "achievement", "pos": "n.", "syns": ["fulfillment", "accomplishment", "attainment"] },
+        { "f": "achievable", "pos": "adj.", "syns": [] }
+      ],
+      "sent": {
+        "text": "On the last day, all of us stood inside a room we had built in just a week, feeling a sense of ___.",
+        "ans": "achievement"
+      }
+    },
+    {
+      "w": "celebrate",
+      "zh": "慶祝",
+      "syns": ["commemorate", "observe"],
+      "forms": [
+        {
+          "f": "celebrated",
+          "pos": "adj.",
+          "syns": ["distinguished", "outstanding", "prominent", "eminent", "remarkable", "important", "well-known"]
+        }
+      ]
+    },
+    {
+      "w": "impact",
+      "zh": "影響",
+      "syns": ["influence", "affect"],
+      "phrase": {
+        "k": "have a powerful impact on",
+        "means": "對…有強大的影響",
+        "wrongMeans": ["與…毫無關係", "為…感到抱歉", "對…感到困惑"]
+      },
+      "sent": {
+        "text": "Education can have a huge ___ on a child's life.",
+        "ans": "impact"
+      }
+    },
+    {
+      "w": "cunning",
+      "zh": "狡猾",
+      "syns": ["wily", "sly", "crafty", "shrewd", "tricky"]
+    },
+    {
+      "w": "tradition",
+      "zh": "傳統",
+      "syns": ["convention", "custom"],
+      "def": "a custom or belief handed down from generation to generation",
+      "forms": [{ "f": "traditional", "pos": "adj.", "syns": ["conventional"] }],
+      "sent": {
+        "text": "It's ___ in some countries for the bride to wear a white dress for the wedding.",
+        "ans": "traditional"
+      }
+    },
+    {
+      "w": "excited",
+      "zh": "興奮",
+      "syns": ["incited", "provoked", "stirred", "thrilled"],
+      "forms": [
+        { "f": "excite", "pos": "v.", "syns": ["incite", "provoke", "stir", "thrill"] },
+        { "f": "exciting", "pos": "adj.", "syns": ["inciting", "provoking", "stirring", "thrilling"] }
+      ]
+    },
+    {
+      "w": "evident",
+      "zh": "明顯",
+      "syns": ["obvious", "apparent", "clear", "plain"],
+      "forms": [{ "f": "evidently", "pos": "adv.", "syns": ["obviously"] }],
+      "sent": {
+        "text": "For ___ reasons, the government worries that the volcano will erupt again.",
+        "ans": "evident"
+      }
+    },
+    {
+      "w": "replace",
+      "zh": "代替",
+      "syns": ["substitute", "take the place of", "displace", "supplant"],
+      "forms": [
+        { "f": "replacement", "pos": "n.", "syns": ["substitution", "supplanting", "taking the place of"] }
+      ],
+      "sent": {
+        "text": "Television and video can easily ___ family communication as well as physical activity and other interests.",
+        "ans": "replace"
+      }
+    },
+    {
+      "w": "ancient",
+      "zh": "古老的",
+      "syns": ["old", "aged", "antique", "archaic"],
+      "def": "belonging to the very distant past（古代的；古老的）"
+    },
+    {
+      "w": "participate",
+      "zh": "參加",
+      "syns": ["take part in", "partake in", "join in", "engage in", "become involved in"],
+      "forms": [
+        { "f": "participation", "pos": "n.", "syns": [] },
+        { "f": "participant", "pos": "n.", "syns": [] }
+      ]
+    },
+    {
+      "w": "competitor",
+      "zh": "競爭者",
+      "syns": ["rival", "opponent", "contender", "contestant", "challenger", "antagonist"],
+      "forms": [
+        { "f": "competition", "pos": "n.", "syns": ["match", "contest", "rivalry"] },
+        { "f": "compete", "pos": "v.", "syns": ["rival", "contend", "contest", "match"] },
+        { "f": "competitive", "pos": "adj.", "syns": [] }
+      ]
+    },
+    {
+      "w": "represent",
+      "zh": "代表",
+      "syns": ["stand for", "symbolize", "denote", "exemplify", "describe", "portray", "explain", "define"],
+      "forms": [
+        { "f": "representation", "pos": "n.", "syns": ["depiction", "portrayal", "symbol"] }
+      ],
+      "sent": {
+        "text": "The color green ___ peace and happiness.",
+        "ans": "represents"
+      }
+    },
+    {
+      "w": "proud",
+      "zh": "自豪的",
+      "syns": ["arrogant", "insolent", "scornful", "disdainful", "contemptuous"],
+      "forms": [
+        {
+          "f": "pride",
+          "pos": "n.",
+          "syns": ["hubris", "arrogance", "insolence", "scorn", "disdain", "contempt"]
+        }
+      ]
+    }
+  ],
+  "sports": [
+    { "w": "sailing", "zh": "帆船運動；航行", "def": "the action of sailing in a ship or boat as a sport or pastime" },
+    { "w": "boxing", "zh": "拳擊；拳擊運動", "def": "the sport or practice of fighting with the fists, especially with padded gloves in a ring" },
+    { "w": "table tennis", "zh": "桌球；乒乓球", "def": "a game in which two or four players hit a lightweight ball back and forth across a table using small rackets" },
+    { "w": "judo", "zh": "柔道", "def": "a sport of Japanese origin in which the goal is to throw or tackle an opponent to the ground" },
+    { "w": "fencing", "zh": "擊劍；劍術", "def": "the sport of fighting with light swords to score points" },
+    { "w": "gymnastics", "zh": "體操", "def": "exercises developing or displaying physical agility and coordination, typically performed on equipment" }
+  ],
+  "olympic": [
+    { "w": "honor", "zh": "尊榮；崇敬", "syns": ["respect", "revere", "glorify", "worship"], "def": "to show great respect for someone or something" },
+    { "w": "individual", "zh": "個人的", "syns": ["personal", "single", "separate", "sole"], "def": "relating to a single person, not a group" },
+    { "w": "stadium", "zh": "體育場；運動場", "syns": ["arena", "ground", "venue"], "def": "a large sports ground with rows of seats for spectators" },
+    { "w": "introduce", "zh": "引進；介紹", "syns": ["bring in", "launch", "establish", "present"], "def": "to bring something into use for the first time" },
+    { "w": "take part in", "zh": "參加；參與", "syns": ["participate in", "join in", "engage in"], "def": "to be involved in an activity or event" },
+    { "w": "come to an end", "zh": "結束；終止", "syns": ["finish", "conclude", "terminate", "stop"], "def": "to stop happening or existing" },
+    { "w": "tune in", "zh": "收看；收聽", "syns": ["watch", "listen to", "follow"], "def": "to watch or listen to a broadcast program" },
+    { "w": "national", "zh": "國家的；民族的", "syns": ["public", "state", "governmental"], "def": "relating to a nation as a whole" }
+  ],
+  "child_core": [
+    {
+      "w": "eccentricity",
+      "zh": "怪癖；古怪",
+      "pos": "n.",
+      "syns": ["odd habit", "oddity"],
+      "def": "deviation from the normal or expected"
+    },
+    {
+      "w": "kid",
+      "zh": "小孩；開玩笑",
+      "pos": "n./v.",
+      "syns": ["tease", "fool"],
+      "phrase": {
+        "k": "kid around",
+        "means": "joke around（開玩笑；玩鬧）",
+        "wrongMeans": ["grow up quickly（快快長大）", "work seriously（認真工作）", "cry loudly（大聲哭泣）"]
+      }
+    },
+    {
+      "w": "fate",
+      "zh": "命運",
+      "pos": "n.",
+      "syns": ["destiny", "lot"]
+    },
+    {
+      "w": "compensate",
+      "zh": "補償；彌補",
+      "pos": "v.",
+      "syns": ["make up for", "atone for"],
+      "forms": [
+        { "f": "compensation", "pos": "n.", "syns": ["atonement"] }
+      ]
+    },
+    {
+      "w": "adventurous",
+      "zh": "冒險的；大膽的",
+      "pos": "adj.",
+      "syns": ["daring", "venturesome", "venturous"],
+      "def": "willing to take risks",
+      "forms": [
+        { "f": "adventure", "pos": "n.", "syns": ["wandering", "exploit", "venture"] }
+      ]
+    },
+    {
+      "w": "conquer",
+      "zh": "征服；戰勝",
+      "pos": "v.",
+      "syns": ["defeat", "triumph"]
+    },
+    {
+      "w": "fantastical",
+      "zh": "奇異的；不可思議的",
+      "pos": "adj.",
+      "syns": ["chimeric", "amazing", "astonishing", "remarkable", "extraordinary", "marvelous"],
+      "forms": [
+        { "f": "fantasy", "pos": "n.", "syns": ["fancy", "chimera", "illusion"] }
+      ]
+    },
+    {
+      "w": "view ... as",
+      "zh": "視…為",
+      "pos": "phrase",
+      "syns": ["regard ... as", "think ... as", "suppose ... as"]
+    }
+  ],
+  "child_lyrics": [
+    { "w": "eccentricities", "zh": "怪癖；古怪行為" },
+    { "w": "kidding around", "zh": "開玩笑；玩鬧" },
+    { "w": "elementary", "zh": "基本的；單純的" },
+    { "w": "wonder", "zh": "奇蹟；奇遇" },
+    { "w": "conquest", "zh": "征服" },
+    { "w": "painful", "zh": "痛苦的" }
+  ],
+  "child_fills": [
+    {
+      "text": "They view it as such strange ___.",
+      "ans": "eccentricities",
+      "distract": ["adventures", "fantasies", "fates"],
+      "note": "Childhood 第三段歌詞"
+    },
+    {
+      "text": "'Cause I keep kidding ___, like a child.",
+      "ans": "around",
+      "distract": ["over", "up", "on"],
+      "note": "Childhood 第三段"
+    },
+    {
+      "text": "People say I'm not okay 'cause I love such ___ things.",
+      "ans": "elementary",
+      "distract": ["fantastical", "painful", "adventurous"],
+      "note": "Childhood 第四段"
+    },
+    {
+      "text": "It's been my ___ to compensate for the childhood I've never known.",
+      "ans": "fate",
+      "distract": ["wonder", "dream", "pain"],
+      "note": "Childhood 第四段"
+    },
+    {
+      "text": "Like pirates and ___ dreams.",
+      "ans": "adventurous",
+      "distract": ["fantastical", "painful", "elementary"],
+      "note": "Childhood 第五段"
+    },
+    {
+      "text": "Like ___ stories to share.",
+      "ans": "fantastical",
+      "distract": ["adventurous", "painful", "elementary"],
+      "note": "Childhood 第八段"
+    },
+    {
+      "text": "The ___ youth I've had.",
+      "ans": "painful",
+      "distract": ["adventurous", "fantastical", "elementary"],
+      "note": "Childhood 第九段"
+    }
+  ],
+  "allrise_core": [
+    {
+      "w": "objection",
+      "zh": "反對；不贊成",
+      "pos": "n.",
+      "syns": ["disagreement", "disfavor", "disapproval", "opposition", "protest"],
+      "forms": [
+        { "f": "object", "pos": "v.", "syns": ["disagree", "disfavor", "disapprove", "oppose", "protest"] }
+      ]
+    },
+    {
+      "w": "deny",
+      "zh": "否認；拒絕",
+      "pos": "v.",
+      "syns": ["reject", "refuse", "decline", "renounce", "negate", "spurn", "refute", "turn down"]
+    },
+    {
+      "w": "happen",
+      "zh": "發生",
+      "pos": "v.",
+      "syns": ["take place", "occur"]
+    },
+    {
+      "w": "decide",
+      "zh": "決定",
+      "pos": "v.",
+      "syns": ["determine", "resolve", "make up one's mind"],
+      "phrase": {
+        "k": "decide to",
+        "means": "determine to / be determined to（決定去做）",
+        "wrongMeans": ["be unable to（無法做到）", "try not to（試著不做）", "refuse to（拒絕做）"]
+      },
+      "forms": [
+        { "f": "decision", "pos": "n.", "syns": ["determination", "resolution"] }
+      ]
+    },
+    {
+      "w": "confess",
+      "zh": "承認；懺悔",
+      "pos": "v.",
+      "syns": ["admit", "acknowledge", "reveal", "repent", "concede"],
+      "def": "to admit that one has committed a crime or done something wrong",
+      "phrase": {
+        "k": "confess to",
+        "means": "向…坦白",
+        "wrongMeans": ["向…請求幫助", "向…道謝", "向…詢問意見"]
+      },
+      "forms": [
+        { "f": "confession", "pos": "n.", "syns": ["admission", "revelation"] }
+      ]
+    },
+    {
+      "w": "overrule",
+      "zh": "駁回；否決",
+      "pos": "v.",
+      "syns": ["deny", "reject", "decline", "turn down"]
+    },
+    {
+      "w": "fake",
+      "zh": "假裝；偽造",
+      "pos": "v.",
+      "syns": ["pretend", "disguise"],
+      "def": "to pretend to have a feeling or be in a situation"
+    },
+    {
+      "w": "preach",
+      "zh": "佈道；說教",
+      "pos": "n./v.",
+      "syns": ["sermon", "lecture", "sermonize", "expound", "moralize"]
+    },
+    {
+      "w": "overstep",
+      "zh": "越界；逾越",
+      "pos": "v.",
+      "syns": ["transgress", "violate", "disrupt", "exceed"],
+      "def": "to go beyond or exceed a conventional or appropriate limit or standard"
+    },
+    {
+      "w": "border",
+      "zh": "邊界",
+      "pos": "n.",
+      "syns": ["frontier", "boundary"]
+    },
+    {
+      "w": "option",
+      "zh": "選項",
+      "pos": "n.",
+      "syns": ["choice", "selection", "alternative"]
+    },
+    {
+      "w": "jury",
+      "zh": "陪審團",
+      "pos": "n.",
+      "syns": [],
+      "def": "a group of people chosen to decide a verdict in a court of law"
+    },
+    {
+      "w": "juror",
+      "zh": "陪審員",
+      "pos": "n.",
+      "syns": [],
+      "def": "a member of a jury"
+    },
+    {
+      "w": "judge",
+      "zh": "法官",
+      "pos": "n.",
+      "syns": [],
+      "def": "an official who decides cases in a court of law"
+    }
+  ],
+  "allrise_fills": [
+    {
+      "text": "What I will tell ___ just the other day.",
+      "ans": "happened",
+      "distract": ["occurred", "appeared", "passed"]
+    },
+    {
+      "text": "I must ___, cause I've had about enough.",
+      "ans": "confess",
+      "distract": ["decide", "deny", "preach"]
+    },
+    {
+      "text": "I'm telling you now — objection ___.",
+      "ans": "overruled",
+      "distract": ["denied", "rejected", "dismissed"]
+    },
+    {
+      "text": "Two for the lie that you ___.",
+      "ans": "denied",
+      "distract": ["rejected", "confessed", "overruled"]
+    },
+    {
+      "text": "Four all the times you've been ___.",
+      "ans": "faking",
+      "distract": ["lying", "pretending", "hiding"]
+    },
+    {
+      "text": "But the ___ will decide.",
+      "ans": "jury",
+      "distract": ["judge", "court", "option"]
+    },
+    {
+      "text": "Leaving all my ___ open.",
+      "ans": "options",
+      "distract": ["borders", "decisions", "confessions"]
+    },
+    {
+      "text": "And you know that you ___ the border.",
+      "ans": "overstepped",
+      "distract": ["denied", "crossed", "ignored"]
+    },
+    {
+      "text": "I bring you into court to ___ my order.",
+      "ans": "preach",
+      "distract": ["make", "deny", "confess"]
+    }
+  ]
+}
