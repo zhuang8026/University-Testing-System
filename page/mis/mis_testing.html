@@ -46,8 +46,9 @@
 </div>
 
 <script type="module">
-import questionList from '../../asset/js/index.js';
+import loadQuestions from '../../asset/js/index.js';
 
+const questionList = await loadQuestions();
 const { qa01, qa02, qa03, qa04, qa05, qa06, qa07, qa08 } = questionList;
 const allChapters = [qa01, qa02, qa03, qa04, qa05, qa06, qa07, qa08];
 
