@@ -15,7 +15,7 @@ let allCoreSyns = [], allFormSyns = [], allForms = [], allCoreWords = [];
 let allChildSyns = [], allChildForms = [], allChildFormSyns = [];
 let allArSyns = [], allArForms = [], allArFormSyns = [], allArWords = [];
 
-const TOTAL_QS = 33;
+const TOTAL_QS = 50;
 
 async function loadData() {
   const resp = await fetch('../../asset/data/en_v2_words.json');
