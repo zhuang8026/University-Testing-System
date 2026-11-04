@@ -163,3 +163,9 @@ h1 {
   color: #a78bfa;
   border: 1px solid rgba(167, 139, 250, 0.2);
 }
+.card-icon.db {
+  font-size: 18px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(56, 189, 248, 0.05));
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}

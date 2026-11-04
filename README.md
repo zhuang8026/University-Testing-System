@@ -20,6 +20,7 @@
 | 科目 | 題庫 | 出題方式 |
 |---|---|---|
 | Web 程式設計(一) | 期中考選擇題 121 題（單選 103、複選 18） | 全部題目必考 |
+| 資料庫（CH01 & 02） | 期中考問答題 7 題（第 5 題含 a～g 小題） | 寫完逐題對答案，不計分 |
 
 ## 功能
 
@@ -32,6 +33,7 @@
   - 篩選：只看複選題、未作答、答錯的題目
   - 作答進度自動存在瀏覽器，重新整理不會消失
   - 支援深色模式
+- **資料庫**：問答題，在每題下方寫答案，按「對答案」就在下方顯示參考答案；也可一次全部對答案。不計分，作答內容自動存在瀏覽器。
 
 ## 本機執行
 
@@ -51,12 +53,13 @@ page/
   mis/mis_testing.html     大一 MIS 測驗
   enlish/                  大一英文測驗（3 份）
   y2/web1.html             大二 Web 程式設計(一)
+  y2/db_mid0102.html       大二 資料庫 期中考（問答題）
 asset/
-  css/                     global（共用配色）、home、style（MIS）、en（英文）、web1
+  css/                     global（共用配色）、home、style（MIS）、en（英文）、web1、essay（問答題）
   js/                      題庫載入與各測驗邏輯
-  data/                    題庫 JSON（qa01～08、en_v2_words、web1）
+  data/                    題庫 JSON（qa01～08、en_v2_words、web1、db_mid0102）
   files/                   MIS 題庫原始文字檔
-data/                      Web 程式設計(一) 期中考原始題目（Markdown）
+data/                      Web 程式設計(一)、資料庫 期中考原始題目（Markdown）
 list/                      MIS 第 9～16 章選擇題筆記
 ```
 
@@ -75,6 +78,15 @@ list/                      MIS 第 9～16 章選擇題筆記
   "opts": ["`ABC = 10;`", "`const ABC = 10;`", "`define('ABC',10);`", "`$ABC = 10;`"],
   "key": "C", "alt": "B", "note": "PHP 5.3 以後 B 也可以" }
 ```
+
+**問答題**（`asset/data/db_mid0102.json`，由 `asset/js/essay_quiz.js` 顯示）：`answer` 為參考答案段落，`k` 是粗體標題；題目可附 `tables`（`pk` 為主鍵欄位，會加底線）；有 `sub` 時每個小題各自作答、各自對答案。
+
+```json
+{ "q": "解說 ODBC（Open Database Connectivity）作用", "score": 10, "ref": "Ch01 第 9 節",
+  "answer": [{ "v": "是標準連結介面…" }] }
+```
+
+新增一份問答題考試只要準備 JSON，並複製 `page/y2/db_mid0102.html`，改掉 `<script>` 上的 `data-src`（題庫路徑）與 `data-store`（作答存檔名稱）。
 
 ## 新增科目
 
