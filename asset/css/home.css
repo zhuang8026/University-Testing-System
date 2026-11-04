@@ -118,3 +118,42 @@ h1 {
   transform: translateX(4px);
   color: var(--accent);
 }
+
+/* ── Grade Icons ── */
+.card-icon.grade1,
+.card-icon.grade2 {
+  font-family: inherit;
+}
+.card-icon.grade1 {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(251, 191, 36, 0.05));
+  color: var(--amber);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+.card-icon.grade2 {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.15), rgba(167, 139, 250, 0.05));
+  color: #a78bfa;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+/* ── Views ── */
+.view[hidden] { display: none; }
+.view .back-link {
+  display: flex;
+  width: fit-content;
+}
+
+/* ── Empty State ── */
+.empty {
+  padding: 40px 28px;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+}
+.empty-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+.empty-text {
+  font-size: 14px;
+  color: var(--text2);
+}

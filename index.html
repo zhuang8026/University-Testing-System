@@ -3,16 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>大一模擬考</title>
+  <title>大學模擬考</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./asset/css/global.css" />
   <link rel="stylesheet" href="./asset/css/home.css" />
 </head>
 <body>
-  <div class="container">
-    <!-- <div class="badge">📝</div> -->
+  <!-- 年級選擇 -->
+  <div class="container view" id="view-grade">
+    <h1>大學模擬考</h1>
+    <p class="subtitle">選擇年級 (v1.1.0)</p>
+    <div class="cards">
+      <a class="card" href="#y1">
+        <div class="card-icon grade1">一</div>
+        <div class="card-body">
+          <div class="card-title">大一</div>
+          <div class="card-desc">管理資訊系統、英文</div>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a class="card" href="#y2">
+        <div class="card-icon grade2">二</div>
+        <div class="card-body">
+          <div class="card-title">大二</div>
+          <div class="card-desc">題庫建置中</div>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 大一 -->
+  <div class="container view" id="view-y1" hidden>
+    <a class="back-link" href="#">← 返回年級選擇</a>
     <h1>大一模擬考</h1>
-    <p class="subtitle">選擇科目開始測驗 (v1.0.3)</p>
+    <p class="subtitle">選擇科目開始測驗</p>
     <div class="cards">
       <a class="card" href="./page/mis/mis_testing.html">
         <div class="card-icon mis">MIS</div>
@@ -48,5 +73,33 @@
       </a>
     </div>
   </div>
+
+  <!-- 大二 -->
+  <div class="container view" id="view-y2" hidden>
+    <a class="back-link" href="#">← 返回年級選擇</a>
+    <h1>大二模擬考</h1>
+    <p class="subtitle">選擇科目開始測驗</p>
+    <div class="cards">
+      <!-- 新增大二科目時，在這裡加入 .card，並移除下方 .empty -->
+      <div class="empty">
+        <div class="empty-icon">📚</div>
+        <div class="empty-text">大二題庫建置中，敬請期待</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 依網址 hash 切換畫面：(空) 年級選擇、#y1 大一、#y2 大二
+    const views = { '': 'view-grade', '#y1': 'view-y1', '#y2': 'view-y2' };
+
+    function showView() {
+      const target = views[location.hash] || 'view-grade';
+      document.querySelectorAll('.view').forEach(v => { v.hidden = v.id !== target; });
+      window.scrollTo(0, 0);
+    }
+
+    window.addEventListener('hashchange', showView);
+    showView();
+  </script>
 </body>
 </html>
