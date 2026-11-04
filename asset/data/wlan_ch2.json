@@ -1,0 +1,494 @@
+{
+ "choice": [
+  {
+   "q": "在DCF中，哪個IFS最短？",
+   "opts": [
+    "PIFS",
+    "EIFS",
+    "DIFS",
+    "SIFS"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "在分散式協調功能中，是使用哪種服務提供資料收送？",
+   "opts": [
+    "PCF",
+    "DCF",
+    "CW",
+    "CFP"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "IEEE 802.11 MAC訊框分為哪三類？",
+   "opts": [
+    "Control/Data/Security",
+    "Data/Security/Management",
+    "Management/Security/Control",
+    "Control/Management/Data"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "IEEE 802.11 MAC中，用於取消聯結的服務是？",
+   "opts": [
+    "Reassociation",
+    "Integration",
+    "Disassociation",
+    "Association"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "無基礎架構 Ad-Hoc 網路的特點是？",
+   "opts": [
+    "裝置可直接連接",
+    "只能單一用戶",
+    "需要AP",
+    "需有有線分散式系統"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "工作站間通訊必須經由AP是屬於哪一種類型架構？",
+   "opts": [
+    "Infrastructure",
+    "Infrastructure和Ad-Hoc皆是",
+    "Ad-Hoc",
+    "Infrastructure和Ad-Hoc皆非"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "我們在購買無線Wi-Fi基地台時，其預設模式通常為？",
+   "opts": [
+    "路由器模式(Router mode)",
+    "WISP模式(WISP mode)",
+    "存取點模式(AP mode)",
+    "中繼模式(Repeater mode)"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "SSID指的是？",
+   "opts": [
+    "Secure Session ID",
+    "System Service ID",
+    "Service Set Identifier",
+    "Station Set ID"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "Bluetooth工作於哪個頻段？",
+   "opts": [
+    "900 MHz",
+    "5.8 GHz",
+    "2.452 GHz",
+    "60 GHz"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "在台灣，IEEE 802.11 之 2.4 GHz 頻段中，AP 使用之非重疊頻道通常是哪三個為最佳？",
+   "opts": [
+    "1、6、11",
+    "2、5、9",
+    "1、2、3",
+    "3、7、11"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "IEEE 802.11b在2.4 GHz頻段上的最大傳輸速率是多少？",
+   "opts": [
+    "600 Mbit/s",
+    "11 Mbit/s",
+    "54 Mbit/s",
+    "2 Mbit/s"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "IEEE 802.11ax 標準所使用的操作頻段不包括？",
+   "opts": [
+    "2.4GHz",
+    "24GHz",
+    "6GHz",
+    "5GHz"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "WPA2僅採用哪種加密演算法？",
+   "opts": [
+    "SHA-1",
+    "AES",
+    "RC4",
+    "TKIP"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "802.11ac俗稱「第幾代Wi-Fi」？",
+   "opts": [
+    "5th Generation",
+    "3rd Generation",
+    "6th Generation",
+    "4th Generation"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "Wi-Fi 8 特別希望改善哪一類複雜環境下的無線連線品質？",
+   "opts": [
+    "完全沒有移動裝置的環境",
+    "單一裝置、無干擾環境",
+    "多裝置、高干擾、多 AP 與移動環境",
+    "僅有單一 AP 的固定環境"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "在多 AP 與移動情境中，Wi-Fi 8 特別強調改善哪一項能力？",
+   "opts": [
+    "關閉 P2P 通訊",
+    "取消多鏈路操作",
+    "漫遊與換手時的連線品質",
+    "降低 AP 數量"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "下列敘述何者不正確？",
+   "opts": [
+    "訊號的強度不會隨著距離而衰減",
+    "在無線通訊中，若接收端同時收到多筆資料，會有碰撞的情況發生",
+    "傳送端和接收端必須在同一個頻道才可通訊",
+    "通訊訊號分成數位和類比兩種訊號"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "在 Infrastructure 架構中，不包含下列哪個元件？",
+   "opts": [
+    "DS",
+    "中繼器",
+    "AP",
+    "BSS"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "IEEE 802.11ax 的目標喚醒時間功能主要用於？",
+   "opts": [
+    "支援MU-MIMO",
+    "增加吞吐量",
+    "降低延遲",
+    "延長電池壽命"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "在 IEEE 802.11 中，隨機後退演算法的目的是？",
+   "opts": [
+    "增加頻寬",
+    "保護安全",
+    "降低功耗",
+    "減少碰撞"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "WPA 相較 WEP 的一大改進是？",
+   "opts": [
+    "靜態金鑰",
+    "無鑰匙協議",
+    "使用RC4",
+    "動態產生Session Key"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "Wi-Fi 8 所對應的 IEEE 標準為何？",
+   "opts": [
+    "IEEE 802.11ax",
+    "IEEE 802.11bn",
+    "IEEE 802.11be",
+    "IEEE 802.11ac"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "IEEE 802.11n在 2.4 GHz 與 5.8 GHz 頻段都支持哪種調變技術？",
+   "opts": [
+    "OFDM",
+    "IR",
+    "DSSS",
+    "FHSS"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "Ad Hoc 無線網路中，兩個站台可能因為距離太遠，無法以 CSMA 解決碰撞問題，稱為？",
+   "opts": [
+    "隱藏問題 Hidden Problem",
+    "暴露終端機問題 Exposed Terminal Problem",
+    "隱藏節點問題 Hidden-Node Problem",
+    "多路徑效應 Multipath Effect"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "無線網路通訊協定 IEEE 802.11ax 單支天線且使用40MHz頻寬，其傳輸速度可達？",
+   "opts": [
+    "1201Mbps",
+    "286.8Mbps",
+    "600.4Mbps",
+    "143.4Mbps"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "無線網路佈建時，哪一項屬於多重路徑干擾問題？",
+   "opts": [
+    "Multipath Interference",
+    "Fading",
+    "Shadowing",
+    "Attenuation"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "IEEE 802.11a工作在哪個ISM頻段？",
+   "opts": [
+    "60 GHz",
+    "2.4 GHz",
+    "900 MHz",
+    "5 GHz"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "RF Band指的是？",
+   "opts": [
+    "無線頻段",
+    "加密技術",
+    "傳輸功率",
+    "資料頻率"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "MIMO技術在802.11n中最高支援多少支天線？",
+   "opts": [
+    "4",
+    "6",
+    "2",
+    "8"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "下列何者屬於 Wi-Fi 8 的主要特色？",
+   "opts": [
+    "提高封包遺失率",
+    "減少多 AP 支援",
+    "降低傳輸延遲並提升連線穩定性",
+    "降低實際吞吐量"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "某家網路咖啡店宣稱只要顧客來店消費，並攜帶配有無線網路卡的筆記型電腦，即可享受無線上網的服務，請問此家咖啡店的無線區域網路最可能採用下列哪一種通訊協定？",
+   "opts": [
+    "Wi-Fi",
+    "Bluetooth",
+    "ADSL",
+    "RFID"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "IEEE 802.11 網路架構中，ESA 代表？",
+   "opts": [
+    "Extended Service Area",
+    "Enhanced Service Area",
+    "Ethernet Service Area",
+    "Extra Service Area"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "相較於 Wi-Fi 7 主要追求更高傳輸速率，Wi-Fi 8 更強調哪一項核心方向？",
+   "opts": [
+    "更大的封包大小",
+    "更高的頻寬使用量",
+    "更超高的可靠度",
+    "更大的天線數量"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "IEEE 802.11ac在80 MHz頻寬下的最大理論速率約為？",
+   "opts": [
+    "72.2 Mbps",
+    "200 Mbps",
+    "433.3 Mbps",
+    "866.7 Mbps"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "在 IEEE 802.11 中，ACK 訊框主要用於？",
+   "opts": [
+    "確認資料接收",
+    "傳送資料",
+    "發起連結",
+    "設定臨界值"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "下列何者最能概括 Wi-Fi 7 與 Wi-Fi 8 的重點差異？",
+   "opts": [
+    "Wi-Fi 7 重點是更快，Wi-Fi 8 更強調更穩、更快反應、更少掉封包",
+    "Wi-Fi 7 強調更省電，Wi-Fi 8 強調更多頻段",
+    "Wi-Fi 7 與 Wi-Fi 8 的核心方向完全相同",
+    "Wi-Fi 7 強調更穩，Wi-Fi 8 強調更便宜"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "下列何者是無線區域網路（WLAN）通訊無法避免的缺點？",
+   "opts": [
+    "無法網路漫遊",
+    "無線網路連線費用高",
+    "無線網路節點無法移動",
+    "無線電波彼此干擾"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "無線區域網路使用的頻段不包括哪一個？",
+   "opts": [
+    "2.4～2.483 GHz",
+    "1.8～1.9 GHz",
+    "902～928 MHz",
+    "5.725～5.875 GHz"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "下列頻帶何者不受政府管轄，可提供一般無線電設計使用？",
+   "opts": [
+    "10KHz",
+    "16KHz",
+    "2.4GHz",
+    "6.8GHz"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "IEEE 802.11原始標準於哪一年發布？",
+   "opts": [
+    "1997年",
+    "2009年",
+    "2003年",
+    "1999年"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "IEEE 802.11ac 標準所使用的操作頻段為何？",
+   "opts": [
+    "5GHz",
+    "6GHz",
+    "2.4GHz",
+    "1.8GHz"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "下列哪一項是802.11ax引入的新功能？",
+   "opts": [
+    "OFDMA",
+    "DCF",
+    "SIFS",
+    "RTS/CTS"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "IEEE 802.11n 所使用的頻率為？",
+   "opts": [
+    "3GHz",
+    "6GHz",
+    "2.4GHz",
+    "60GHz"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "四向交握(4-Way Handshake)的正確順序是？",
+   "opts": [
+    "RTS→CTS→DATA→ACK",
+    "CTS→RTS→DATA→ACK",
+    "RTS→ACK→DATA→ACK",
+    "CTS→ACK→DATA→ACK"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "下列哪一項不是 802.11ac 的特色？",
+   "opts": [
+    "採用 1024-QAM",
+    "多使用者 MIMO",
+    "支援 8 個空間串流",
+    "支援 160 MHz 頻寬"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "在 IEEE 802.11 PCF 之非輪詢工作站必須在哪個週期傳送訊框？",
+   "opts": [
+    "競爭和免競爭週期皆不可",
+    "競爭週期",
+    "競爭和免競爭週期皆可",
+    "免競爭週期"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "IEEE 802.11be預計將會被定義為哪個Wi-Fi版本？",
+   "opts": [
+    "Wi-Fi 7",
+    "Wi-Fi 8",
+    "Wi-Fi 9",
+    "Wi-Fi 6E"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "IEEE 802.11ax的Wi-Fi 6E新增了哪個頻段？",
+   "opts": [
+    "900 MHz",
+    "60 GHz",
+    "6 GHz",
+    "3 GHz"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "Wi-Fi聯盟最初的名稱是什麼？",
+   "opts": [
+    "Wireless Ethernet Compatibility Alliance",
+    "IEEE 802.11 Alliance",
+    "Wi-Fi Standards Group",
+    "Wireless LAN Alliance"
+   ],
+   "key": "A"
+  }
+ ]
+}

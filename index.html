@@ -26,7 +26,7 @@
         <div class="card-icon grade2">二</div>
         <div class="card-body">
           <div class="card-title">大二</div>
-          <div class="card-desc">Web 程式設計(一)、資料庫</div>
+          <div class="card-desc">Web 程式設計、資料庫、無線區域及個人網路</div>
         </div>
         <span class="card-arrow">→</span>
       </a>
@@ -80,19 +80,102 @@
     <h1>大二模擬考</h1>
     <p class="subtitle">選擇科目開始測驗</p>
     <div class="cards">
-      <a class="card" href="./page/y2/web1.html">
+      <a class="card" href="#y2-web">
         <div class="card-icon php">PHP</div>
         <div class="card-body">
-          <div class="card-title">Web 程式設計(一)</div>
-          <div class="card-desc">期中考選擇題 121 題，全部必考</div>
+          <div class="card-title">Web 程式設計</div>
+          <div class="card-desc">Web 程式設計(一) 期中考</div>
         </div>
         <span class="card-arrow">→</span>
       </a>
+      <a class="card" href="#y2-db">
+        <div class="card-icon db">DB</div>
+        <div class="card-body">
+          <div class="card-title">資料庫</div>
+          <div class="card-desc">期中考 CH01 & 02</div>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a class="card" href="#y2-wlan">
+        <div class="card-icon wlan">Wi-Fi</div>
+        <div class="card-body">
+          <div class="card-title">無線區域及個人網路</div>
+          <div class="card-desc">第 2、2.1、3 章，共 136 題，可分章或全部作答</div>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 大二／Web 程式設計（新增章節考題時在 .cards 裡加入 .card） -->
+  <div class="container view" id="view-y2-web" hidden>
+    <a class="back-link" href="#y2">← 返回大二</a>
+    <h1>Web 程式設計</h1>
+    <p class="subtitle">選擇考試範圍開始測驗</p>
+    <div class="cards">
+      <a class="card" href="./page/y2/web1.html">
+        <div class="card-icon php">PHP</div>
+        <div class="card-body">
+          <div class="card-title">Web 程式設計(一) 期中考</div>
+          <div class="card-desc">選擇題 121 題，全部必考</div>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 大二／資料庫（新增章節考題時在 .cards 裡加入 .card） -->
+  <div class="container view" id="view-y2-db" hidden>
+    <a class="back-link" href="#y2">← 返回大二</a>
+    <h1>資料庫</h1>
+    <p class="subtitle">選擇考試範圍開始測驗</p>
+    <div class="cards">
       <a class="card" href="./page/y2/db_mid0102.html">
         <div class="card-icon db">DB</div>
         <div class="card-body">
-          <div class="card-title">資料庫 (CH01 & 02)</div>
-          <div class="card-desc">期中考問答題 7 題，寫完逐題對答案，不計分</div>
+          <div class="card-title">期中考 CH01 & 02</div>
+          <div class="card-desc">問答題 7 題，寫完逐題對答案，不計分</div>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 大二／無線區域及個人網路 -->
+  <div class="container view" id="view-y2-wlan" hidden>
+    <a class="back-link" href="#y2">← 返回大二</a>
+    <h1>無線區域及個人網路</h1>
+    <p class="subtitle">選擇章節開始測驗，每章題目全部必考</p>
+    <div class="cards">
+      <a class="card" href="./page/y2/wlan_ch2.html">
+        <div class="card-icon wlan">2</div>
+        <div class="card-body">
+          <div class="card-title">第2章 無線區域網路</div>
+          <div class="card-desc">802.11 架構與 MAC、各代 Wi-Fi、頻段與安全性，49 題</div>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a class="card" href="./page/y2/wlan_ch2_1.html">
+        <div class="card-icon wlan">2.1</div>
+        <div class="card-body">
+          <div class="card-title">第2.1章 IP 與 Subnet 概念</div>
+          <div class="card-desc">IPv4、子網路遮罩與切割、DNS、TCP/UDP，34 題</div>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a class="card" href="./page/y2/wlan_ch3.html">
+        <div class="card-icon wlan">3</div>
+        <div class="card-body">
+          <div class="card-title">第3章 無線網路基本概念</div>
+          <div class="card-desc">路由協定、FANET／D2D、多通道、媒體存取、電源管理，53 題</div>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a class="card" href="./page/y2/wlan_all.html">
+        <div class="card-icon wlan">ALL</div>
+        <div class="card-body">
+          <div class="card-title">全部章節</div>
+          <div class="card-desc">第 2、2.1、3 章合併，共 136 題</div>
         </div>
         <span class="card-arrow">→</span>
       </a>
@@ -100,8 +183,11 @@
   </div>
 
   <script>
-    // 依網址 hash 切換畫面：(空) 年級選擇、#y1 大一、#y2 大二
-    const views = { '': 'view-grade', '#y1': 'view-y1', '#y2': 'view-y2' };
+    // 依網址 hash 切換畫面：(空) 年級選擇、#y1 大一、#y2 大二、#y2-xxx 大二各科目的考試列表
+    const views = {
+      '': 'view-grade', '#y1': 'view-y1', '#y2': 'view-y2',
+      '#y2-web': 'view-y2-web', '#y2-db': 'view-y2-db', '#y2-wlan': 'view-y2-wlan',
+    };
 
     function showView() {
       const target = views[location.hash] || 'view-grade';

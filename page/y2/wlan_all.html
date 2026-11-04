@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>無線網路 全部章節（第2、2.1、3章）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../asset/css/web1.css">
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <h1>無線網路 全部章節（第2、2.1、3章）</h1>
+    <div class="stats" aria-live="polite">
+      <span id="st-answered"></span>
+      <span id="st-score"></span>
+    </div>
+    <button type="button" class="btn primary small" id="btn-submit">交卷</button>
+  </div>
+  <div class="progress" aria-hidden="true"><i id="progress"></i></div>
+</header>
+
+<div class="layout">
+  <main>
+    <section class="intro">
+      <a class="back-link" href="../../index.html#y2-wlan">← 返回無線區域及個人網路</a>
+      <p>全部章節（第2、2.1、3章）：選擇題共 <span id="n-c">…</span> 題，每題必考。點選項作答，可隨時交卷，未作答的題目以答錯計分；作答進度會自動存在這個瀏覽器。</p>
+      <div class="tools">
+        <label class="switch"><input type="checkbox" id="opt-instant"><span class="track"></span>作答後立即對答案</label>
+        <label class="filter">顯示
+          <select id="filter">
+            <option value="all">全部題目</option>
+            <option value="todo">未作答</option>
+            <option value="wrong">答錯的題目</option>
+          </select>
+        </label>
+        <button type="button" class="btn small" id="btn-reset">重新作答</button>
+      </div>
+    </section>
+
+    <section class="summary" id="summary" hidden aria-live="polite"></section>
+
+    <h2 class="sec" id="sec-c">選擇題<small id="sub-c"></small></h2>
+    <div id="list-c"><p class="loading">題目載入中…</p></div>
+    <p class="empty" id="empty" hidden>這個篩選條件下沒有題目。把「顯示」改回「全部題目」就能看到所有題目。</p>
+  </main>
+
+  <aside class="card" id="card" aria-label="答案卡">
+    <div class="card-head">
+      <h2>答案卡</h2>
+      <button type="button" class="card-close" id="card-close" aria-label="關閉答案卡">✕</button>
+    </div>
+    <div class="legend"><span><i class="on"></i>已劃記</span><span><i class="ok"></i>正確答案</span><span>點題號跳到該題</span></div>
+    <div class="card-grid" id="card-c"></div>
+  </aside>
+</div>
+
+<button type="button" class="btn primary fab" id="fab">答案卡</button>
+<div class="scrim" id="scrim"></div>
+
+<script src="../../asset/js/choice_quiz.js" data-src="../../asset/data/wlan_ch2.json,../../asset/data/wlan_ch2_1.json,../../asset/data/wlan_ch3.json" data-store="wlan_all_v1"></script>
+</body>
+</html>

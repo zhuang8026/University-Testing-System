@@ -7,7 +7,6 @@ main{max-width:none}
 
 .q{grid-template-columns:2.6rem minmax(0,1fr)}
 .q-text{font-weight:500}
-.tag.ref{color:var(--muted);border-color:var(--ink-soft)}
 
 /* 題目附表 */
 .tables{display:flex;flex-wrap:wrap;gap:1rem 1.5rem;margin:.8rem 0 .2rem}

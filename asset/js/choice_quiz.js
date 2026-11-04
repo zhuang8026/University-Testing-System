@@ -1,16 +1,20 @@
 // ═══════════════════════════════════════════════════════════════
-//  Web 程式設計(一) — 全題測驗（選擇題全部必考）
-//  題庫：asset/data/web1.json
-//    choice: { q, opts[4], key: "C" | "BD", alt?, note?, tip? }   題目含「（複選）」或 key 多於一個字母即為複選
+//  選擇題全題測驗（所有題目必考，可隨時交卷，未作答以答錯計）
+//  用法：<script src="choice_quiz.js" data-src="題庫.json[,題庫2.json…]" data-store="localStorage key">
+//        data-src 可用逗號列出多個題庫，題目會依序合併
+//  題庫：{ choice: [{ q, opts[4], key: "C" | "BD", alt?, note?, tip?, topic? }] }
+//    題目含「（複選）」或 key 多於一個字母即為複選；topic 會顯示為題目旁的主題標籤
 // ═══════════════════════════════════════════════════════════════
-const STORE = "web1_quiz_v1";
+const SCRIPT = document.currentScript;
+const STORE = SCRIPT.dataset.store;
+const SRC = SCRIPT.dataset.src.split(",");
 const QS = [], byId = {};
 
 function build(data) {
   data.choice.forEach((c, i) => {
     const q = { id: "c" + (i + 1), n: i + 1, text: c.q.replace("（複選）", "").trim(),
       opts: c.opts, key: c.key, multi: c.q.includes("（複選）") || c.key.length > 1,
-      alt: c.alt || "", note: c.note || "", tip: c.tip || "" };
+      alt: c.alt || "", note: c.note || "", tip: c.tip || "", topic: c.topic || "" };
     QS.push(q); byId[q.id] = q;
   });
 }
@@ -70,7 +74,8 @@ function htmlQ(q) {
   } else if (S.instant && q.multi) {
     foot = `<div class="fb"><button type="button" class="btn small" data-act="check"${a ? "" : " disabled"}>確認答案</button><span class="hint">複選題選好後再按確認</span></div>`;
   }
-  const tags = (q.multi ? '<span class="tag">複選</span>' : "") + (q.tip ? `<span class="tag tip">${esc(q.tip)}</span>` : "");
+  const tags = (q.multi ? '<span class="tag">複選</span>' : "") + (q.tip ? `<span class="tag tip">${esc(q.tip)}</span>` : "")
+    + (q.topic ? `<span class="tag ref">${esc(q.topic)}</span>` : "");
   return `<div class="q-num">${q.n}</div><div class="q-body"><p class="q-text">${rt(q.text)}${tags}</p><div class="opts" role="group" aria-label="第 ${q.n} 題選項">${opts}</div>${foot}</div>`;
 }
 
@@ -256,13 +261,12 @@ scrim.addEventListener("click", closeCard);
 document.addEventListener("keydown", e => { if (e.key === "Escape") closeCard(); });
 
 /* ---------- 初始化 ---------- */
-fetch("../../asset/data/web1.json")
-  .then(r => r.json())
-  .then(data => {
-    build(data);
+Promise.all(SRC.map(src => fetch(src.trim()).then(r => r.json())))
+  .then(banks => {
+    build({ choice: banks.flatMap(b => b.choice) });
     const multi = QS.filter(q => q.multi).length;
     $("#n-c").textContent = QS.length;
-    $("#sub-c").textContent = `單選 ${QS.length - multi} 題、複選 ${multi} 題`;
+    $("#sub-c").textContent = multi ? `單選 ${QS.length - multi} 題、複選 ${multi} 題` : `共 ${QS.length} 題`;
     renderAll();
   })
   .catch(() => {

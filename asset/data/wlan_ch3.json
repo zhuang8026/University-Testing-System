@@ -1,0 +1,589 @@
+{
+ "choice": [
+  {
+   "q": "請問下列何者敘述錯誤？",
+   "topic": "無線網路基本概念",
+   "opts": [
+    "無線網路免費頻段為2.4GHz",
+    "在防禦天災方面，無線衛星網路的穩定性較差",
+    "無線區域網路中的隨建即連模式無須透過Access Point即可連線",
+    "無線衛星通訊在偵查、定位、導航及通訊上廣泛被使用"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "在獨立型基本服務集(IBSS)模式中，節點間的通訊不需透過何者？",
+   "topic": "無線網路基本概念",
+   "opts": [
+    "RREQ",
+    "RF",
+    "BSS",
+    "AP"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "Media Access Control (MAC) 層的主要功能不包括？",
+   "topic": "無線網路基本概念",
+   "opts": [
+    "避免封包衝突",
+    "定址",
+    "路由尋找",
+    "媒體存取控制"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "下列關於回應式路由策略那一項不正確？",
+   "topic": "路由協定",
+   "opts": [
+    "英文名稱為 Proactive Routing",
+    "英文名稱為 Reactive Routing",
+    "又稱為 On-demand Routing",
+    "不事先計算路徑，有需要時再尋找路徑。"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "關於回應式路由協定，何者正確？",
+   "topic": "路由協定",
+   "opts": [
+    "全部皆是",
+    "回應式路由只尋找與維護有需要的路由",
+    "適合偶發流量但一旦發生則有大流量",
+    "首次尋找會耗時較多而造成封包延遲"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "在無線隨意網路中，回應式路由協定的主要優點是？",
+   "topic": "路由協定",
+   "opts": [
+    "無需任何路由資訊",
+    "支援靜態網路",
+    "僅維護必要路由",
+    "適用於高流量密度"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "下列何者是主動式路由策略？",
+   "topic": "路由協定",
+   "opts": [
+    "Dynamic Source Routing (DSR)",
+    "Ad hoc On-demand Distance Vector (AODV)",
+    "Temporally Ordered Routing Algorithm (TORA)",
+    "距離向量路由 Destination-Sequenced Distance-Vector（DSDV）"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "在無線隨意網路中，主動式路由協定的特性是？",
+   "topic": "路由協定",
+   "opts": [
+    "僅支援單跳來搜尋路由",
+    "完全不維護路由",
+    "定期維護全部路由資訊",
+    "僅在需要時才搜尋路由"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "關於主動式路由與回應式路由的優缺點，下列何者不正確？",
+   "topic": "路由協定",
+   "opts": [
+    "主動式路由浪費很多不必要的花費在不需要的路由上",
+    "回應式路由每次都使用最佳路徑",
+    "回應式路由能適應不同的流量密度",
+    "流量密度較低時，回應式路由優於主動式路由"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "距離向量路由協定 DBF (Distributed Bellman-Ford) 傳輸時有什麼問題，使得資源造成不必要的浪費？",
+   "topic": "路由協定",
+   "opts": [
+    "網路鏈節失效而造成迴圈",
+    "不管有沒有資料要傳輸卻都要一直連結著",
+    "傳送訊框時會造成資料容易碰撞而造成資料損壞",
+    "無安全性而資料易被盜取"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "在無線隨意網路中，ZRP 協定中，跨越 Zone 邊界的路由搜尋使用何種策略？",
+   "topic": "路由協定",
+   "opts": [
+    "MPR 廣播",
+    "回應式路由",
+    "進階鏈結狀態",
+    "主動式路由"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "在無線隨意網路中，DSDV 每次完整式路由更新會做什麼動作？",
+   "topic": "路由協定",
+   "opts": [
+    "僅更新序列編號",
+    "只更新差異路由",
+    "停止路由探索",
+    "廣播全部路由表"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "在無線隨意網路中，Dynamic Source Routing (DSR) 協定之路由資訊附加於何處？",
+   "topic": "路由協定",
+   "opts": [
+    "MAC 表頭",
+    "資料封包的表頭",
+    "序列編號欄位",
+    "RTS/CTS 欄位"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "動態來源路由(DSR)為回應式路由協定，當一節點打算送出一封包，而其路由表格中並沒有該目的地的資訊時，該節點會啟動什麼程序找尋？",
+   "topic": "路由協定",
+   "opts": [
+    "路由錯誤(RERR)",
+    "路由探索(Route Discovery)",
+    "路由請求(RREQ)",
+    "路由回應(RREP)"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "在無線隨意網路之路由探索(Route Discovery)過程中，用於廣播路由請求的訊息簡稱為？",
+   "topic": "路由協定",
+   "opts": [
+    "RREP",
+    "RREQ",
+    "RTS",
+    "RERR"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "在無線隨意網路之多點跳躍(Multihop)技術主要用於何種需求？",
+   "topic": "路由協定",
+   "opts": [
+    "中繼封包至不在範圍內的節點",
+    "加密傳輸內容",
+    "降低電力消耗",
+    "提升單一跳傳輸速率"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "下列哪一項是廣播風暴(Broadcast Storm)問題的主要原因？",
+   "topic": "路由協定",
+   "opts": [
+    "多通道切換不同步",
+    "TIM 更新延遲",
+    "RTS/CTS 握手失敗",
+    "重複重播過多廣播封包"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "傳統 Ad Hoc 路由協定可能無法即時反映網路狀況，主要原因為何？",
+   "topic": "路由協定",
+   "opts": [
+    "常依賴 Hop Count、Routing Table 或固定規則選擇路徑",
+    "只能使用有線網路",
+    "所有節點位置都固定",
+    "不使用任何路由資訊"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "下列何者最能說明無線隨意網路之 AI / ML-based Routing 的主要優勢？",
+   "topic": "路由協定",
+   "opts": [
+    "只能處理單一網路指標",
+    "可同時分析 Mobility、Link Quality、Congestion、Latency、Residual Energy 與 Path Stability 等資訊，選擇較穩定、低延遲且節能的路徑",
+    "只依據 Hop Count 選擇路徑",
+    "可接受完全不考慮節點移動情況"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "無線隨意網路之 AI / ML-based Routing 考量節點剩餘電量的主要目的為何？",
+   "topic": "路由協定",
+   "opts": [
+    "避免使用低電量節點並延長網路生命週期",
+    "增加路由重建次數",
+    "增加傳輸延遲",
+    "優先選擇低電量節點"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "無線隨意網路之 AI / ML-based Routing 若考量節點位置與移動方向，主要目的是什麼？",
+   "topic": "路由協定",
+   "opts": [
+    "降低節點剩餘電量",
+    "增加網路壅塞",
+    "預測節點移動並降低路由中斷",
+    "增加封包大小"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "FANET (Flying Ad Hoc Network) 可視為哪一種無線隨意網路的延伸？",
+   "topic": "FANET／D2D",
+   "opts": [
+    "WSN",
+    "WLAN",
+    "VANET",
+    "MANET"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "FANET (Flying Ad Hoc Network) 主要是由哪一類節點所組成？",
+   "topic": "FANET／D2D",
+   "opts": [
+    "固定基地台",
+    "無人機或飛行載具",
+    "一般桌上型電腦",
+    "有線交換器"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "FANET (Flying Ad Hoc Network) 相較於一般 MANET，最明顯的網路特性為何？",
+   "topic": "FANET／D2D",
+   "opts": [
+    "節點固定不移動",
+    "只能進行單跳通訊",
+    "節點高速移動且三維拓樸變化頻繁",
+    "不需要路由機制"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "由於 FANET (Flying Ad Hoc Network) 的拓樸變化頻繁，因此路由機制特別需要具備哪一項能力？",
+   "topic": "FANET／D2D",
+   "opts": [
+    "更快速地進行路由重建",
+    "降低節點移動速度",
+    "取消多跳傳輸而仍可通訊",
+    "固定使用同一路徑"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "D2D (Device-to-Device) 的核心概念為何？",
+   "topic": "FANET／D2D",
+   "opts": [
+    "只能用於有線網路通訊",
+    "所有資料都必須先送到核心網路",
+    "裝置之間可直接交換資料，不必每筆資料都經過基地台",
+    "所有裝置必須透過 Wi-Fi AP 通訊"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "下列何者屬於 D2D (Device-to-Device) 的常見應用？",
+   "topic": "FANET／D2D",
+   "opts": [
+    "災害緊急通訊、5G Sidelink 與 V2X",
+    "DNS 網域解析",
+    "固定式資料中心備份",
+    "連結傳統電話交換網路"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "在 5G 系統中，讓手機或終端設備直接通訊的重要 D2D (Device-to-Device) 實現方式稱為何？",
+   "topic": "FANET／D2D",
+   "opts": [
+    "Sidelink",
+    "Roaming",
+    "Backbone",
+    "Handover"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "在無線隨意網路（Wireless Ad Hoc Network）中，下列何者不會產生多通道的隱藏終端點問題？",
+   "topic": "多通道",
+   "opts": [
+    "多通道時間同步之共同跳躍",
+    "多通道時間非同步之動態頻道分配",
+    "全部皆是",
+    "多通道時間同步之區分階段"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "多通道的隱藏終端點問題主要因何而生？",
+   "topic": "多通道",
+   "opts": [
+    "信號衰減",
+    "時間切換不同步",
+    "編碼不正交",
+    "RTS/CTS 長度過大"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "在無線網路之多通道協定中，Common Hopping 解決了哪種問題？",
+   "topic": "多通道",
+   "opts": [
+    "MPR 廣播負擔",
+    "跳數限制",
+    "隱藏終端點",
+    "APSD"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "在無線隨意網路中，共同跳躍 (Common Hopping) 機制的特點是在何時切換通道？",
+   "topic": "多通道",
+   "opts": [
+    "每個節點獨立切換",
+    "只有 MPR 節點切換",
+    "所有節點同步切換",
+    "僅在睡眠模式下切換"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "在無線隨意網路中，區分階段 (Split Phase) 機制將時間分為哪兩個階段？",
+   "topic": "多通道",
+   "opts": [
+    "控制階段與資料傳輸階段",
+    "傳輸/空閒",
+    "控制/輪詢",
+    "資料/回應"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "在無線隨意網路之 Dynamic Channel Allocation (DCA) 流程中，節點 A 先發送哪種訊框以詢問通道？",
+   "topic": "多通道",
+   "opts": [
+    "CTS",
+    "DATA",
+    "RTS",
+    "RES"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "在無線隨意網路中，Dynamic Channel Allocation (DCA) 中，節點首先會維護的列表為？",
+   "topic": "多通道",
+   "opts": [
+    "Channel Usage List",
+    "Free Channel List",
+    "Control Channel List",
+    "Reservation List"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "在無線隨意網路中，Dynamic Channel Allocation (DCA) 中，用於控制封包交換的專用通道稱為？",
+   "topic": "多通道",
+   "opts": [
+    "Data Channel",
+    "Reservation Channel",
+    "Control Channel",
+    "Busy Tone Channel"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "在無線隨意網路之多通道的環境下，若使用Dynamic Channel Allocation (DCA) 時，至少需要幾個收發器？",
+   "topic": "多通道",
+   "opts": [
+    "四個",
+    "一個",
+    "三個",
+    "二個"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "在無線網路中，Aloha 協定的最大頻道使用率約為多少？",
+   "topic": "媒體存取（Aloha／CSMA／Polling／FDMA／TDMA／CDMA）",
+   "opts": [
+    "50%",
+    "18%",
+    "75%",
+    "37%"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "在無線網路中，Slotted-Aloha 相較 Aloha 的通道效率約為？",
+   "topic": "媒體存取（Aloha／CSMA／Polling／FDMA／TDMA／CDMA）",
+   "opts": [
+    "37%",
+    "50%",
+    "80%",
+    "18%"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "CSMA偵測的機制分為Non-persistent CSMA與Persistent CSMA，哪一種理論上會比較耗電？",
+   "topic": "媒體存取（Aloha／CSMA／Polling／FDMA／TDMA／CDMA）",
+   "opts": [
+    "Non-persistent CSMA",
+    "Persistent CSMA",
+    "二者差不多",
+    "二者無從比較"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "在 CSMA/CA 中，若媒介忙碌時，節點將採取何種做法？",
+   "topic": "媒體存取（Aloha／CSMA／Polling／FDMA／TDMA／CDMA）",
+   "opts": [
+    "廢棄封包",
+    "切換頻道",
+    "延遲隨機時間後重試",
+    "立即傳送"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "在無線網路中，Polling 存取方式的主要缺點是？",
+   "topic": "媒體存取（Aloha／CSMA／Polling／FDMA／TDMA／CDMA）",
+   "opts": [
+    "主節點故障即整網失效",
+    "無法順序訪問",
+    "需要隨機等待",
+    "避免衝突能力弱"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "FDMA 技術透過何種方式讓多個使用者同時存取媒體？",
+   "topic": "媒體存取（Aloha／CSMA／Polling／FDMA／TDMA／CDMA）",
+   "opts": [
+    "頻段切割",
+    "隨機後退",
+    "編碼區隔",
+    "時槽分割"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "將通訊的頻道分成多個時槽 (Time Slot) 以供多人使用的方式稱為？",
+   "topic": "媒體存取（Aloha／CSMA／Polling／FDMA／TDMA／CDMA）",
+   "opts": [
+    "CDMA",
+    "FDMA",
+    "TDMA",
+    "OFDMA"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "CDMA 的核心概念在於？",
+   "topic": "媒體存取（Aloha／CSMA／Polling／FDMA／TDMA／CDMA）",
+   "opts": [
+    "隨機存取",
+    "切割頻段",
+    "分割時間",
+    "以正交編碼區隔用戶"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "假設某一發射資料的行動台正交編碼為01011100，而接收台在接收時收到 (-4+0-2+0+2+0+2-2，-1+1-3+3+1-1-1+1)，所得知該行動台送出位元資料為？",
+   "topic": "媒體存取（Aloha／CSMA／Polling／FDMA／TDMA／CDMA）",
+   "opts": [
+    "01",
+    "10",
+    "00",
+    "11"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "假設某行動台正交編碼為 00011011，發出編碼 (+1+1+1-1-1+1-1-1，-1-1-1+1+1-1+1+1) 後，而接收台在接收時與該行動台之正交編碼做內積，所得知該行動台送出位元資料為？",
+   "topic": "媒體存取（Aloha／CSMA／Polling／FDMA／TDMA／CDMA）",
+   "opts": [
+    "11",
+    "10",
+    "01",
+    "00"
+   ],
+   "key": "C"
+  },
+  {
+   "q": "關於電源管理和電力控制的描述，下列何者不正確？",
+   "topic": "電源管理與電力控制",
+   "opts": [
+    "電源管理在手機處於長期待機狀態時進入睡眠模式以節省電力",
+    "電源管理動態調整發送封包的電力以節省電力",
+    "電力控制的英文是 Power Control",
+    "電源管理的英文是 Power Management"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "BASIC電力控制協定中封包使用四向(RTS/CTS/DATA/ACK)交握。請問哪兩個封包是以最小所需電力傳送？",
+   "topic": "電源管理與電力控制",
+   "opts": [
+    "RTS/DATA",
+    "RTS/CTS",
+    "CTS/ACK",
+    "DATA/ACK"
+   ],
+   "key": "D"
+  },
+  {
+   "q": "在 IEEE 802.11 Power Save Mode 之 BASIC 協定中，節點根據哪個訊框決定 DATA 所需最小電力？",
+   "topic": "電源管理與電力控制",
+   "opts": [
+    "RTS",
+    "ACK",
+    "CTS",
+    "CTS"
+   ],
+   "key": "C",
+   "alt": "D",
+   "note": "原題的 C、D 選項都是 CTS，所以選 D 也算對。"
+  },
+  {
+   "q": "在 IEEE 802.11 Power Save Mode 中，Power Control 協定的目的是何者？",
+   "topic": "電源管理與電力控制",
+   "opts": [
+    "增加 MPR 節點數量",
+    "動態調整傳輸功率以節省能量",
+    "加速 RTS/CTS 握手",
+    "提高序列編號"
+   ],
+   "key": "B"
+  },
+  {
+   "q": "在 IEEE 802.11 Power Save Mode 中，AP 透過何種訊息告知有封包緩衝給睡眠工作站？",
+   "topic": "電源管理與電力控制",
+   "opts": [
+    "TIM",
+    "DTIM",
+    "Beacon",
+    "RES"
+   ],
+   "key": "A"
+  },
+  {
+   "q": "在 Ad Hoc 網路省電協定中，睡眠工作站由何者暫存封包？",
+   "topic": "電源管理與電力控制",
+   "opts": [
+    "其他睡眠站",
+    "鄰近醒著的工作站",
+    "無線基地台",
+    "自己"
+   ],
+   "key": "B"
+  }
+ ]
+}
