@@ -47,6 +47,11 @@ h1 {
 .subtitle {
   font-size: 14px;
   color: var(--text2);
+  margin-bottom: 48px;
+}
+.subtitle_version {
+  font-size: 14px;
+  color: var(--text2);
 }
 .subtitle_date {
   font-size: 14px;
